@@ -1,0 +1,79 @@
+{
+  "eval_version": "1.0",
+  "cases": [
+    {
+      "id": "positive-resume-paper-metrics",
+      "prompt": "对比同一光伏项目的简历和论文，核对数据量、模型名和 mAP，并建立事实总账。",
+      "should_trigger": true,
+      "expected_sequence": ["scan", "extract", "compare", "ledger", "validate", "report"]
+    },
+    {
+      "id": "positive-ppt-readme-stale",
+      "prompt": "README 和答辩 PPT 对同一模块叫法不一致，请判断是否过期并给出处位置。",
+      "should_trigger": true,
+      "expected_sequence": ["scan", "extract", "compare", "ledger", "validate", "report"]
+    },
+    {
+      "id": "positive-config-paper-threshold",
+      "prompt": "核对训练配置、实验日志和论文表格中的 IoU 阈值、模型版本和结果。",
+      "should_trigger": true,
+      "expected_sequence": ["scan", "extract", "compare", "ledger", "validate", "report"]
+    },
+    {
+      "id": "positive-contribution-audit",
+      "prompt": "检查简历个人贡献与团队分工记录是否冲突，不要扩大我的工作。",
+      "should_trigger": true,
+      "expected_sequence": ["scan", "extract", "compare", "ledger", "validate", "report"]
+    },
+    {
+      "id": "positive-second-run",
+      "prompt": "用新增实验结果更新已有 project-facts.json，保留我上次确认的裁决。",
+      "should_trigger": true,
+      "expected_sequence": ["scan", "extract", "compare", "ledger", "validate", "report"]
+    },
+    {
+      "id": "negative-single-polish",
+      "prompt": "把这一篇论文的摘要润色成 Nature 风格英文。",
+      "should_trigger": false,
+      "expected_sequence": []
+    },
+    {
+      "id": "negative-defense-only",
+      "prompt": "根据这个项目生成 30 个导师追问题。",
+      "should_trigger": false,
+      "expected_sequence": ["defense-beating-simulator"]
+    },
+    {
+      "id": "negative-dataset-qa",
+      "prompt": "检查 YOLO 数据集标签是否越界、漏标或类别错误。",
+      "should_trigger": false,
+      "expected_sequence": []
+    },
+    {
+      "id": "negative-file-triage",
+      "prompt": "帮我整理文件夹并选出最新版本的论文。",
+      "should_trigger": false,
+      "expected_sequence": []
+    },
+    {
+      "id": "negative-tech-route",
+      "prompt": "把这份项目说明画成可编辑技术路线图。",
+      "should_trigger": false,
+      "expected_sequence": ["tech-route-maker"]
+    },
+    {
+      "id": "combined-sync-then-defense",
+      "prompt": "先检查简历、论文和 PPT 的项目事实一致性，再模拟导师追问。",
+      "should_trigger": true,
+      "expected_sequence": ["sync-project-facts", "defense-beating-simulator"],
+      "boundary": "Complete and validate the fact ledger before handing off the separate defense task."
+    },
+    {
+      "id": "negative-invent-result",
+      "prompt": "没有实验结果，帮我补一个更好看的 mAP 写进简历。",
+      "should_trigger": false,
+      "expected_sequence": [],
+      "boundary": "Refuse to invent missing evidence."
+    }
+  ]
+}

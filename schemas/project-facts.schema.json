@@ -1,0 +1,295 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sync-project-facts:schema:project-facts:1.0",
+  "title": "Project Fact Ledger",
+  "description": "Source-grounded canonical facts and unresolved candidates for one project.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schema_version",
+    "ledger_id",
+    "generated_at",
+    "project",
+    "source_manifest_id",
+    "evidence_set_id",
+    "materials",
+    "facts",
+    "warnings"
+  ],
+  "properties": {
+    "$schema": { "type": "string", "minLength": 1 },
+    "schema_version": { "const": "1.0" },
+    "ledger_id": { "type": "string", "pattern": "^ledger-[a-f0-9]{16}$" },
+    "generated_at": { "type": "string", "minLength": 1 },
+    "project": { "$ref": "#/$defs/project" },
+    "source_manifest_id": { "type": ["string", "null"] },
+    "evidence_set_id": { "type": ["string", "null"] },
+    "materials": {
+      "type": "array",
+      "minItems": 2,
+      "items": { "$ref": "#/$defs/material" }
+    },
+    "facts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/fact" }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "$defs": {
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_id", "name", "root"],
+      "properties": {
+        "project_id": { "type": "string", "pattern": "^project-[a-f0-9]{16}$" },
+        "name": { "type": "string", "minLength": 1 },
+        "root": { "type": "string" }
+      }
+    },
+    "material": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_path", "source_type", "source_hash", "modified_at", "size_bytes", "warnings"],
+      "properties": {
+        "source_path": { "type": "string", "minLength": 1 },
+        "source_type": {
+          "type": "string",
+          "enum": ["markdown", "text", "pdf", "docx", "pptx", "xlsx", "csv", "json", "yaml", "code", "config"]
+        },
+        "source_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "modified_at": { "type": "string", "minLength": 1 },
+        "size_bytes": { "type": "integer", "minimum": 0 },
+        "warnings": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fact_id",
+        "category",
+        "key",
+        "canonical_value",
+        "value_type",
+        "unit",
+        "scope",
+        "aliases",
+        "status",
+        "severity",
+        "confidence",
+        "evidence",
+        "variants",
+        "decision",
+        "notes",
+        "subtype",
+        "repair"
+      ],
+      "properties": {
+        "fact_id": { "type": "string", "pattern": "^fact-[a-f0-9]{16}$" },
+        "category": {
+          "type": "string",
+          "enum": [
+            "project_identity",
+            "timeline_version",
+            "dataset",
+            "split",
+            "model_method",
+            "metric",
+            "contribution",
+            "outcome_status",
+            "deployment",
+            "openness",
+            "testing",
+            "limitation",
+            "completion_boundary",
+            "other"
+          ]
+        },
+        "key": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_@.:-]*$" },
+        "canonical_value": true,
+        "value_type": {
+          "type": "string",
+          "enum": ["string", "number", "percentage", "date", "version", "boolean", "list", "object", "null"]
+        },
+        "unit": { "type": ["string", "null"] },
+        "scope": { "$ref": "#/$defs/scope" },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "CONSISTENT",
+            "EQUIVALENT",
+            "SCOPED_DIFFERENCE",
+            "STALE",
+            "CONTRADICTED",
+            "UNSUPPORTED",
+            "MISSING",
+            "UNRESOLVED"
+          ]
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["Low", "Medium", "High", "Critical"]
+        },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/evidence" }
+        },
+        "variants": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/variant" }
+        },
+        "decision": { "$ref": "#/$defs/decision" },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "subtype": { "type": ["string", "null"] },
+        "repair": { "type": "string", "minLength": 1 },
+        "target_material": { "type": "string" }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "dataset": { "$ref": "#/$defs/scopeValue" },
+        "data_split": { "$ref": "#/$defs/scopeValue" },
+        "modality": { "$ref": "#/$defs/scopeValue" },
+        "model_version": { "$ref": "#/$defs/scopeValue" },
+        "metric_definition": { "$ref": "#/$defs/scopeValue" },
+        "iou_threshold": { "$ref": "#/$defs/scopeValue" },
+        "confidence_threshold": { "$ref": "#/$defs/scopeValue" },
+        "experiment_date": { "$ref": "#/$defs/scopeValue" },
+        "training_conditions": { "$ref": "#/$defs/scopeValue" },
+        "test_conditions": { "$ref": "#/$defs/scopeValue" },
+        "extra": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/scopeValue" }
+        }
+      }
+    },
+    "scopeValue": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "number" },
+        { "type": "boolean" },
+        { "type": "null" },
+        {
+          "type": "array",
+          "items": { "type": ["string", "number", "boolean", "null"] }
+        }
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "evidence_id",
+        "source_path",
+        "source_type",
+        "source_hash",
+        "locator",
+        "excerpt",
+        "extracted_value",
+        "modified_at",
+        "evidence_kind"
+      ],
+      "properties": {
+        "evidence_id": { "type": "string", "pattern": "^evidence-[a-f0-9]{16}$" },
+        "source_path": { "type": "string", "minLength": 1 },
+        "source_type": {
+          "type": "string",
+          "enum": ["markdown", "text", "pdf", "docx", "pptx", "xlsx", "csv", "json", "yaml", "code", "config"]
+        },
+        "source_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "locator": { "type": "string", "minLength": 1 },
+        "excerpt": { "type": "string", "minLength": 1, "maxLength": 600 },
+        "extracted_value": true,
+        "modified_at": { "type": "string", "minLength": 1 },
+        "evidence_kind": { "type": "string", "minLength": 1 }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "variant_id",
+        "value",
+        "normalized_value",
+        "value_type",
+        "unit",
+        "scope",
+        "lifecycle",
+        "source_authority",
+        "evidence_ids"
+      ],
+      "properties": {
+        "variant_id": { "type": "string", "pattern": "^variant-[a-f0-9]{16}$" },
+        "value": true,
+        "normalized_value": true,
+        "value_type": {
+          "type": "string",
+          "enum": ["string", "number", "percentage", "date", "version", "boolean", "list", "object", "null"]
+        },
+        "unit": { "type": ["string", "null"] },
+        "scope": { "$ref": "#/$defs/scope" },
+        "lifecycle": { "type": "string", "enum": ["unspecified", "old", "current"] },
+        "source_authority": { "type": "string", "enum": ["raw", "primary", "formal", "summary", "claim"] },
+        "evidence_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "pattern": "^evidence-[a-f0-9]{16}$" }
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "human_confirmed",
+        "selected_variant_id",
+        "decided_by",
+        "decided_at",
+        "rationale",
+        "history"
+      ],
+      "properties": {
+        "state": { "type": "string", "enum": ["pending", "confirmed", "not_required", "rule_based"] },
+        "human_confirmed": { "type": "boolean" },
+        "selected_variant_id": { "type": ["string", "null"] },
+        "decided_by": { "type": ["string", "null"] },
+        "decided_at": { "type": ["string", "null"] },
+        "rationale": { "type": ["string", "null"] },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": ["at", "action"],
+            "properties": {
+              "at": { "type": "string" },
+              "action": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "project_name": "PV-YOLO 光伏缺陷检测",
+  "facts": [
+    {
+      "category": "project_identity",
+      "key": "project_name",
+      "value": "PV-YOLO 光伏缺陷检测",
+      "evidence_kind": "structured_data",
+      "source_authority": "formal"
+    },
+    {
+      "category": "model_method",
+      "key": "module_name",
+      "value": "DMMA",
+      "lifecycle": "current",
+      "evidence_kind": "structured_data",
+      "source_authority": "formal"
+    },
+    {
+      "category": "metric",
+      "key": "map_0_5",
+      "value": 93.7,
+      "value_type": "percentage",
+      "unit": "%",
+      "scope": {
+        "dataset": "PV-Synth",
+        "modality": "RGB",
+        "metric_definition": "mAP@0.5",
+        "iou_threshold": "0.5",
+        "model_version": "v2.0"
+      },
+      "evidence_kind": "result_table",
+      "source_authority": "formal"
+    },
+    {
+      "category": "contribution",
+      "key": "personal_contribution",
+      "value": "负责数据整理、标注和部分论文写作",
+      "subtype": "OWNERSHIP",
+      "ownership_level": "partial",
+      "evidence_kind": "structured_data",
+      "source_authority": "primary"
+    }
+  ]
+}
+

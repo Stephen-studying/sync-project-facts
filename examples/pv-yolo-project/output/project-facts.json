@@ -1,0 +1,569 @@
+{
+  "$schema": "urn:sync-project-facts:schema:project-facts:1.0",
+  "schema_version": "1.0",
+  "ledger_id": "ledger-08c4b90a30ce3b7d",
+  "generated_at": "2026-07-15T18:05:51Z",
+  "project": {
+    "project_id": "project-08c4b90a30ce3b7d",
+    "name": "PV-YOLO 光伏缺陷检测",
+    "root": "examples/pv-yolo-project/materials"
+  },
+  "source_manifest_id": "manifest-7403911737eb4801",
+  "evidence_set_id": "evidence-set-b750cc1739803738",
+  "materials": [
+    {
+      "source_path": "论文事实.json",
+      "source_type": "json",
+      "source_hash": "e5cbee2c1f7811d8fa27593f3dbde43ef98dd81e42a006d8038d14cbc982f8a4",
+      "modified_at": "2026-07-15T17:45:35Z",
+      "size_bytes": 1173,
+      "warnings": []
+    },
+    {
+      "source_path": "项目分工.csv",
+      "source_type": "csv",
+      "source_hash": "d6cc7e121ae2597a762876eb3823453ae6a70584a747459aecd583686aed1d23",
+      "modified_at": "2026-07-15T17:45:41Z",
+      "size_bytes": 169,
+      "warnings": [
+        "Decoded as utf-8-sig."
+      ]
+    },
+    {
+      "source_path": "项目汇报.md",
+      "source_type": "markdown",
+      "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+      "modified_at": "2026-07-15T17:45:38Z",
+      "size_bytes": 291,
+      "warnings": [
+        "Decoded as utf-8-sig."
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "fact-1f09a0560500f244",
+      "category": "contribution",
+      "key": "personal_contribution",
+      "canonical_value": null,
+      "value_type": "string",
+      "unit": null,
+      "scope": {},
+      "aliases": [],
+      "status": "CONTRADICTED",
+      "severity": "Critical",
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "evidence-72574fa248e819d3",
+          "source_path": "论文事实.json",
+          "source_type": "json",
+          "source_hash": "e5cbee2c1f7811d8fa27593f3dbde43ef98dd81e42a006d8038d14cbc982f8a4",
+          "locator": "$.facts[3]",
+          "excerpt": "{\"category\": \"contribution\", \"evidence_kind\": \"structured_data\", \"key\": \"personal_contribution\", \"ownership_level\": \"partial\", \"source_authority\": \"primary\", \"subtype\": \"OWNERSHIP\", \"value\": \"负责数据整理、标注和部分论文写作\"}",
+          "extracted_value": "负责数据整理、标注和部分论文写作",
+          "modified_at": "2026-07-15T17:45:35Z",
+          "evidence_kind": "structured_data"
+        },
+        {
+          "evidence_id": "evidence-c07622c0d9edaeab",
+          "source_path": "项目汇报.md",
+          "source_type": "markdown",
+          "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+          "locator": "line 11",
+          "excerpt": "个人工作:独立设计并训练全部模型。",
+          "extracted_value": "个人工作:独立设计并训练全部模型。",
+          "modified_at": "2026-07-15T17:45:38Z",
+          "evidence_kind": "contribution_statement"
+        },
+        {
+          "evidence_id": "evidence-cf94c54ca4297cd1",
+          "source_path": "项目分工.csv",
+          "source_type": "csv",
+          "source_hash": "d6cc7e121ae2597a762876eb3823453ae6a70584a747459aecd583686aed1d23",
+          "locator": "row 2, column \"贡献说明\"",
+          "excerpt": "贡献说明 = 负责数据整理、标注和部分写作",
+          "extracted_value": "负责数据整理、标注和部分写作",
+          "modified_at": "2026-07-15T17:45:41Z",
+          "evidence_kind": "contribution_statement"
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "variant-776e86f38f235901",
+          "value": "个人工作:独立设计并训练全部模型。",
+          "normalized_value": "个人工作:独立设计并训练全部模型。",
+          "value_type": "string",
+          "unit": null,
+          "scope": {},
+          "lifecycle": "unspecified",
+          "source_authority": "summary",
+          "evidence_ids": [
+            "evidence-c07622c0d9edaeab"
+          ]
+        },
+        {
+          "variant_id": "variant-9a56f8569352a6cf",
+          "value": "负责数据整理、标注和部分论文写作",
+          "normalized_value": "负责数据整理、标注和部分论文写作",
+          "value_type": "string",
+          "unit": null,
+          "scope": {},
+          "lifecycle": "unspecified",
+          "source_authority": "primary",
+          "evidence_ids": [
+            "evidence-72574fa248e819d3"
+          ]
+        },
+        {
+          "variant_id": "variant-b207db3e62d807b9",
+          "value": "负责数据整理、标注和部分写作",
+          "normalized_value": "负责数据整理、标注和部分写作",
+          "value_type": "string",
+          "unit": null,
+          "scope": {},
+          "lifecycle": "unspecified",
+          "source_authority": "summary",
+          "evidence_ids": [
+            "evidence-cf94c54ca4297cd1"
+          ]
+        }
+      ],
+      "decision": {
+        "state": "pending",
+        "human_confirmed": false,
+        "selected_variant_id": null,
+        "decided_by": null,
+        "decided_at": null,
+        "rationale": null,
+        "history": []
+      },
+      "notes": [
+        "Ownership cannot be inferred from file authorship, code authorship, or stronger wording."
+      ],
+      "subtype": "OWNERSHIP",
+      "repair": "Stop using the broader ownership claim; obtain an explicit team/user confirmation before synchronizing contribution wording."
+    },
+    {
+      "fact_id": "fact-b85157af088c39e3",
+      "category": "deployment",
+      "key": "deployment_readiness",
+      "canonical_value": null,
+      "value_type": "boolean",
+      "unit": null,
+      "scope": {},
+      "aliases": [],
+      "status": "UNSUPPORTED",
+      "severity": "High",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence_id": "evidence-bccf37ee56b1941f",
+          "source_path": "项目汇报.md",
+          "source_type": "markdown",
+          "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+          "locator": "line 9",
+          "excerpt": "性能提升 12%,已达到部署要求。",
+          "extracted_value": true,
+          "modified_at": "2026-07-15T17:45:38Z",
+          "evidence_kind": "claim"
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "variant-30f8c1badd8947d8",
+          "value": true,
+          "normalized_value": "true",
+          "value_type": "boolean",
+          "unit": null,
+          "scope": {},
+          "lifecycle": "unspecified",
+          "source_authority": "claim",
+          "evidence_ids": [
+            "evidence-bccf37ee56b1941f"
+          ]
+        }
+      ],
+      "decision": {
+        "state": "pending",
+        "human_confirmed": false,
+        "selected_variant_id": null,
+        "decided_by": null,
+        "decided_at": null,
+        "rationale": null,
+        "history": []
+      },
+      "notes": [
+        "Only claim-level evidence was found for a fact that requires traceable support."
+      ],
+      "subtype": null,
+      "repair": "Remove or qualify the claim until a result table, log, calculation, configuration, or explicit record is linked."
+    },
+    {
+      "fact_id": "fact-ae85323996370485",
+      "category": "metric",
+      "key": "map_0_5",
+      "canonical_value": null,
+      "value_type": "percentage",
+      "unit": "%",
+      "scope": {
+        "dataset": "PV-Synth",
+        "modality": "RGB",
+        "model_version": "v2.0",
+        "metric_definition": "map@0.5",
+        "iou_threshold": "0.5"
+      },
+      "aliases": [],
+      "status": "CONTRADICTED",
+      "severity": "High",
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "evidence-4bf122ba902a8712",
+          "source_path": "项目汇报.md",
+          "source_type": "markdown",
+          "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+          "locator": "line 7",
+          "excerpt": "数据集: PV-Synth;模态: RGB;模型版本: v2.0;IoU 阈值: 0.5;mAP@0.5 = 94.2%",
+          "extracted_value": 94.2,
+          "modified_at": "2026-07-15T17:45:38Z",
+          "evidence_kind": "narrative"
+        },
+        {
+          "evidence_id": "evidence-91f7039eb59aba39",
+          "source_path": "论文事实.json",
+          "source_type": "json",
+          "source_hash": "e5cbee2c1f7811d8fa27593f3dbde43ef98dd81e42a006d8038d14cbc982f8a4",
+          "locator": "$.facts[2]",
+          "excerpt": "{\"category\": \"metric\", \"evidence_kind\": \"result_table\", \"key\": \"map_0_5\", \"scope\": {\"dataset\": \"PV-Synth\", \"iou_threshold\": \"0.5\", \"metric_definition\": \"mAP@0.5\", \"modality\": \"RGB\", \"model_version\": \"v2.0\"}, \"source_authority\": \"formal\", \"unit\": \"%\", \"value\": 93.7, \"value_type\": \"percentage\"}",
+          "extracted_value": 93.7,
+          "modified_at": "2026-07-15T17:45:35Z",
+          "evidence_kind": "result_table"
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "variant-26e87847c38c1ce5",
+          "value": 93.7,
+          "normalized_value": "0.937",
+          "value_type": "percentage",
+          "unit": "%",
+          "scope": {
+            "dataset": "PV-Synth",
+            "modality": "RGB",
+            "metric_definition": "map@0.5",
+            "iou_threshold": "0.5",
+            "model_version": "v2.0"
+          },
+          "lifecycle": "unspecified",
+          "source_authority": "formal",
+          "evidence_ids": [
+            "evidence-91f7039eb59aba39"
+          ]
+        },
+        {
+          "variant_id": "variant-c38ea4629a1f013b",
+          "value": 94.2,
+          "normalized_value": "0.942",
+          "value_type": "percentage",
+          "unit": "%",
+          "scope": {
+            "modality": "RGB",
+            "dataset": "PV-Synth",
+            "model_version": "v2.0",
+            "iou_threshold": "0.5",
+            "metric_definition": "map@0.5"
+          },
+          "lifecycle": "unspecified",
+          "source_authority": "summary",
+          "evidence_ids": [
+            "evidence-4bf122ba902a8712"
+          ]
+        }
+      ],
+      "decision": {
+        "state": "pending",
+        "human_confirmed": false,
+        "selected_variant_id": null,
+        "decided_by": null,
+        "decided_at": null,
+        "rationale": null,
+        "history": []
+      },
+      "notes": [
+        "Values are incompatible within the same explicit scope; no value was selected."
+      ],
+      "subtype": null,
+      "repair": "Do not choose a value automatically; trace the originating result/configuration and obtain confirmation."
+    },
+    {
+      "fact_id": "fact-aca02130d31c96b6",
+      "category": "metric",
+      "key": "performance_improvement",
+      "canonical_value": null,
+      "value_type": "percentage",
+      "unit": "%",
+      "scope": {
+        "metric_definition": "performanceimprovement"
+      },
+      "aliases": [],
+      "status": "UNSUPPORTED",
+      "severity": "High",
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "evidence_id": "evidence-ba305f3a8a7bf32b",
+          "source_path": "项目汇报.md",
+          "source_type": "markdown",
+          "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+          "locator": "line 9",
+          "excerpt": "性能提升 12%,已达到部署要求。",
+          "extracted_value": 12,
+          "modified_at": "2026-07-15T17:45:38Z",
+          "evidence_kind": "claim"
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "variant-def79ccf2502a5da",
+          "value": 12,
+          "normalized_value": "0.12",
+          "value_type": "percentage",
+          "unit": "%",
+          "scope": {
+            "metric_definition": "performanceimprovement"
+          },
+          "lifecycle": "unspecified",
+          "source_authority": "claim",
+          "evidence_ids": [
+            "evidence-ba305f3a8a7bf32b"
+          ]
+        }
+      ],
+      "decision": {
+        "state": "pending",
+        "human_confirmed": false,
+        "selected_variant_id": null,
+        "decided_by": null,
+        "decided_at": null,
+        "rationale": null,
+        "history": []
+      },
+      "notes": [
+        "Only claim-level evidence was found for a fact that requires traceable support."
+      ],
+      "subtype": null,
+      "repair": "Remove or qualify the claim until a result table, log, calculation, configuration, or explicit record is linked."
+    },
+    {
+      "fact_id": "fact-36a5e1c891957016",
+      "category": "model_method",
+      "key": "module_name",
+      "canonical_value": "DMMA",
+      "value_type": "string",
+      "unit": null,
+      "scope": {},
+      "aliases": [],
+      "status": "STALE",
+      "severity": "Medium",
+      "confidence": 0.85,
+      "evidence": [
+        {
+          "evidence_id": "evidence-bb5f78fa2497db64",
+          "source_path": "论文事实.json",
+          "source_type": "json",
+          "source_hash": "e5cbee2c1f7811d8fa27593f3dbde43ef98dd81e42a006d8038d14cbc982f8a4",
+          "locator": "$.facts[1]",
+          "excerpt": "{\"category\": \"model_method\", \"evidence_kind\": \"structured_data\", \"key\": \"module_name\", \"lifecycle\": \"current\", \"source_authority\": \"formal\", \"value\": \"DMMA\"}",
+          "extracted_value": "DMMA",
+          "modified_at": "2026-07-15T17:45:35Z",
+          "evidence_kind": "structured_data"
+        },
+        {
+          "evidence_id": "evidence-d0f8014db367eb0d",
+          "source_path": "项目汇报.md",
+          "source_type": "markdown",
+          "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+          "locator": "line 5",
+          "excerpt": "模块名称(旧): ECFP",
+          "extracted_value": "ECFP",
+          "modified_at": "2026-07-15T17:45:38Z",
+          "evidence_kind": "narrative"
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "variant-25ffe5ded44278ae",
+          "value": "DMMA",
+          "normalized_value": "dmma",
+          "value_type": "string",
+          "unit": null,
+          "scope": {},
+          "lifecycle": "current",
+          "source_authority": "formal",
+          "evidence_ids": [
+            "evidence-bb5f78fa2497db64"
+          ]
+        },
+        {
+          "variant_id": "variant-3b79aee0e93a811b",
+          "value": "ECFP",
+          "normalized_value": "ecfp",
+          "value_type": "string",
+          "unit": null,
+          "scope": {},
+          "lifecycle": "old",
+          "source_authority": "summary",
+          "evidence_ids": [
+            "evidence-d0f8014db367eb0d"
+          ]
+        }
+      ],
+      "decision": {
+        "state": "rule_based",
+        "human_confirmed": false,
+        "selected_variant_id": null,
+        "decided_by": "comparison_rule",
+        "decided_at": null,
+        "rationale": "The current/old relation is explicit in the sources; modification time was not used.",
+        "history": []
+      },
+      "notes": [
+        "The current/old relation is explicit in the sources; modification time was not used."
+      ],
+      "subtype": null,
+      "repair": "Replace the explicitly superseded name/value in stale materials and retain the confirmed-current source."
+    },
+    {
+      "fact_id": "fact-b67a638d562dfdec",
+      "category": "project_identity",
+      "key": "project_name",
+      "canonical_value": "PV-YOLO 光伏缺陷检测",
+      "value_type": "string",
+      "unit": null,
+      "scope": {},
+      "aliases": [],
+      "status": "CONSISTENT",
+      "severity": "Low",
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "evidence_id": "evidence-6658e9bf53b08442",
+          "source_path": "项目汇报.md",
+          "source_type": "markdown",
+          "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+          "locator": "line 3",
+          "excerpt": "项目名称: PV-YOLO 光伏缺陷检测",
+          "extracted_value": "PV-YOLO 光伏缺陷检测",
+          "modified_at": "2026-07-15T17:45:38Z",
+          "evidence_kind": "narrative"
+        },
+        {
+          "evidence_id": "evidence-c3465e4fe30bb978",
+          "source_path": "论文事实.json",
+          "source_type": "json",
+          "source_hash": "e5cbee2c1f7811d8fa27593f3dbde43ef98dd81e42a006d8038d14cbc982f8a4",
+          "locator": "$.facts[0]",
+          "excerpt": "{\"category\": \"project_identity\", \"evidence_kind\": \"structured_data\", \"key\": \"project_name\", \"source_authority\": \"formal\", \"value\": \"PV-YOLO 光伏缺陷检测\"}",
+          "extracted_value": "PV-YOLO 光伏缺陷检测",
+          "modified_at": "2026-07-15T17:45:35Z",
+          "evidence_kind": "structured_data"
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "variant-c4c9d15afb573297",
+          "value": "PV-YOLO 光伏缺陷检测",
+          "normalized_value": "pv-yolo-光伏缺陷检测",
+          "value_type": "string",
+          "unit": null,
+          "scope": {},
+          "lifecycle": "unspecified",
+          "source_authority": "formal",
+          "evidence_ids": [
+            "evidence-6658e9bf53b08442",
+            "evidence-c3465e4fe30bb978"
+          ]
+        }
+      ],
+      "decision": {
+        "state": "not_required",
+        "human_confirmed": false,
+        "selected_variant_id": null,
+        "decided_by": null,
+        "decided_at": null,
+        "rationale": null,
+        "history": []
+      },
+      "notes": [],
+      "subtype": null,
+      "repair": "No repair required; preserve the locator-backed wording."
+    },
+    {
+      "fact_id": "fact-53793e4f3c0538b3",
+      "category": "timeline_version",
+      "key": "model_version",
+      "canonical_value": "v2.0",
+      "value_type": "version",
+      "unit": null,
+      "scope": {
+        "dataset": "PV-Synth",
+        "modality": "RGB",
+        "model_version": "v2.0",
+        "iou_threshold": "0.5"
+      },
+      "aliases": [],
+      "status": "CONSISTENT",
+      "severity": "Low",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "evidence_id": "evidence-315317eb213c3d86",
+          "source_path": "项目汇报.md",
+          "source_type": "markdown",
+          "source_hash": "70936decc4b125333d0a1eb0a14a56827d1ded70ff4c410b14555d31e6499038",
+          "locator": "line 7",
+          "excerpt": "数据集: PV-Synth;模态: RGB;模型版本: v2.0;IoU 阈值: 0.5;mAP@0.5 = 94.2%",
+          "extracted_value": "v2.0",
+          "modified_at": "2026-07-15T17:45:38Z",
+          "evidence_kind": "narrative"
+        }
+      ],
+      "variants": [
+        {
+          "variant_id": "variant-f110e316f120ec81",
+          "value": "v2.0",
+          "normalized_value": "v2.0",
+          "value_type": "version",
+          "unit": null,
+          "scope": {
+            "modality": "RGB",
+            "dataset": "PV-Synth",
+            "model_version": "v2.0",
+            "iou_threshold": "0.5"
+          },
+          "lifecycle": "unspecified",
+          "source_authority": "summary",
+          "evidence_ids": [
+            "evidence-315317eb213c3d86"
+          ]
+        }
+      ],
+      "decision": {
+        "state": "not_required",
+        "human_confirmed": false,
+        "selected_variant_id": null,
+        "decided_by": null,
+        "decided_at": null,
+        "rationale": null,
+        "history": []
+      },
+      "notes": [
+        "This is a single-source candidate; no cross-material contradiction was observed."
+      ],
+      "subtype": null,
+      "repair": "No repair required; preserve the locator-backed wording."
+    }
+  ],
+  "warnings": []
+}

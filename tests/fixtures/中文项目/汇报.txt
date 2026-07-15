@@ -1,0 +1,3 @@
+项目名称: PV-Synth 缺陷检测
+数据集: PV-Synth；模态: RGB；mAP@0.5 = 0.937
+
