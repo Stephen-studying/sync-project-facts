@@ -4,12 +4,12 @@
 
 ### 科研项目事实同步器
 
-**把散落在简历、论文、PPT、README 与实验结果里的项目说法，整理成一份可回查、可裁决、可持续更新的事实总账。**
+**把散落在多份材料中的项目说法，整理成可回查、可裁决、可持续更新的事实总账。**
 
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-sync--project--facts-4F46E5)](SKILL.md)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](scripts)
 [![Tests](https://img.shields.io/badge/tests-30%20passed-16A34A)](tests)
-[![Offline](https://img.shields.io/badge/core-offline-0F766E)](#隐私与安全边界)
+[![Local First](https://img.shields.io/badge/core-local--first-0F766E)](#隐私与安全边界)
 [![License](https://img.shields.io/badge/license-MIT-F59E0B)](LICENSE)
 
 [快速理解](#它解决什么问题) · [核心能力](#核心能力) · [开始使用](#开始使用) · [本地记忆](#可选的本地偏好记忆) · [示例输出](examples/pv-yolo-project/output)
