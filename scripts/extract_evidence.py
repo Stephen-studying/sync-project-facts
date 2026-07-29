@@ -349,4 +349,533 @@ def extract_xlsx(path: Path) -> tuple[list[dict[str, Any]], list[str], Any]:
                     inline_node = cell.find("x:is", namespace)
                     if cell_type == "inlineStr" and inline_node is not None:
                         value: Any = "".join(inline_node.itertext()).strip()
-                    elif value_node is None orÛž:¶‰žËkºwµçH(€€€¥˜­•ä¥¸ì‰‘…Ñ…}ÍÁ±¥Ð‰ôè(€€€€€€€É•ÑÕÉ¸€‰ÍÁ±¥Ðˆ(€€€¥˜­•ä¥¸ì‰µ½‘•±}¹…µ”ˆ°€‰µ½‘Õ±•}¹…µ”ˆ°€‰µ•Ñ¡½‘}¹…µ”ˆ°€‰‰…Í•±¥¹•}¹…µ”‰ôè(€€€€€€€É•ÑÕÉ¸€‰µ½‘•±}µ•Ñ¡½ˆ(€€€¥˜­•ä¥¸ì‰Á•ÉÍ½¹…±}½¹ÑÉ¥‰ÕÑ¥½¸ˆ°€‰Ñ•…µ}½¹ÑÉ¥‰ÕÑ¥½¸‰ôè(€€€€€€€É•ÑÕÉ¸€‰½¹ÑÉ¥‰ÕÑ¥½¸ˆ(€€€¥˜­•ä¥¸ì‰‘•Á±½åµ•¹Ñ}ÍÑ…ÑÕÌˆ°€‰‘•Á±½åµ•¹Ñ}É•…‘¥¹•ÍÌ‰ôè(€€€€€€€É•ÑÕÉ¸€‰‘•Á±½åµ•¹Ðˆ(€€€¥˜­•ä¥¸ì‰½Á•¹}Í½ÕÉ•}ÍÑ…ÑÕÌ‰ôè(€€€€€€€É•ÑÕÉ¸€‰½Á•¹¹•ÍÌˆ(€€€¥˜­•ä¥¸ì‰É•…±}Ñ•ÍÑ}ÍÑ…ÑÕÌ‰ôè(€€€€€€€É•ÑÕÉ¸€‰Ñ•ÍÑ¥¹œˆ(€€€¥˜­•ä¥¸ì‰±¥µ¥Ñ…Ñ¥½¸‰ôè(€€€€€€€É•ÑÕÉ¸€‰±¥µ¥Ñ…Ñ¥½¸ˆ(€€€¥˜­•ä¥¸ì‰½µÁ±•Ñ¥½¹}‰½Õ¹‘…Éä‰ôè(€€€€€€€É•ÑÕÉ¸€‰½µÁ±•Ñ¥½¹}‰½Õ¹‘…Éäˆ(€€€¥˜­•ä¥¸ì‰Á…Á•É}ÍÑ…ÑÕÌˆ°€‰Á…Ñ•¹Ñ}ÍÑ…ÑÕÌˆ°€‰…Ý…É‘}ÍÑ…ÑÕÌ‰ôè(€€€€€€€É•ÑÕÉ¸€‰½ÕÑ½µ•}ÍÑ…ÑÕÌˆ(€€€¥˜­•ä¥¸ì‰µ…Á|Á|Ôˆ°€‰µ…Á|Á|Õ|Á|äÔˆ°€‰ÁÉ•¥Í¥½¸ˆ°€‰É•…±°ˆ°€‰…ÕÉ…äˆ°€‰˜Å}Í½É”ˆ°€‰™ÁÌˆ°€‰™±½ÁÌˆ°€‰Á…É…µ•Ñ•ÉÌˆ°€‰Á•É™½Éµ…¹•}¥µÁÉ½Ù•µ•¹Ð‰ôè(€€€€€€€É•ÑÕÉ¸€‰µ•ÑÉ¥Œˆ(€€€É•ÑÕÉ¸€‰½Ñ¡•Èˆ(()‘•˜•Ù¥‘•¹•}™½È¡Í½ÕÉ”è‘¥ÑmÍÑÈ°¹åt°¥Ñ•´è‘¥ÑmÍÑÈ°¹åt°Ù…±Õ”è¹ä°­¥¹èÍÑÈð9½¹”€ô9½¹”¤€´ø‘¥ÑmÍÑÈ°¹åtè(€€€•Ù¥‘•¹•}­¥¹€ô­¥¹½È¥Ñ•µl‰•Ù¥‘•¹•}­¥¹‰t(€€€•Ù¥‘•¹•}¥€ôÍÑ…‰±•}¥ (€€€€€€€€‰•Ù¥‘•¹”ˆ°Í½ÕÉ•l‰Í½ÕÉ•}¡…Í ‰t°¥Ñ•µl‰±½…Ñ½È‰t°¹½Éµ…±¥é•}ÍÁ…”¡Ù…±Õ”¤°•Ù¥‘•¹•}­¥¹(€€€€¤(€€€É•ÑÕÉ¸ì(€€€€€€€€‰•Ù¥‘•¹•}¥ˆè•Ù¥‘•¹•}¥°(€€€€€€€€‰Í½ÕÉ•}Á…Ñ ˆèÍ½ÕÉ•l‰Í½ÕÉ•}Á…Ñ ‰t°(€€€€€€€€‰Í½ÕÉ•}ÑåÁ”ˆèÍ½ÕÉ•l‰Í½ÕÉ•}ÑåÁ”‰t°(€€€€€€€€‰Í½ÕÉ•}¡…Í ˆèÍ½ÕÉ•l‰Í½ÕÉ•}¡…Í ‰t°(€€€€€€€€‰±½…Ñ½Èˆè¥Ñ•µl‰±½…Ñ½È‰t°(€€€€€€€€‰•á•ÉÁÐˆèÑÉÕ¹…Ñ”¡¥Ñ•µl‰Ñ•áÐ‰t°€ÔÀÀ¤°(€€€€€€€€‰•áÑÉ…Ñ•‘}Ù…±Õ”ˆèÙ…±Õ”°(€€€€€€€€‰µ½‘¥™¥•‘}…ÐˆèÍ½ÕÉ•l‰µ½‘¥™¥•‘}…Ð‰t°(€€€€€€€€‰•Ù¥‘•¹•}­¥¹ˆè•Ù¥‘•¹•}­¥¹°(€€€ô(()‘•˜µ…­•}…¹‘¥‘…Ñ” (€€€Í½ÕÉ”è‘¥ÑmÍÑÈ°¹åt°(€€€¥Ñ•´è‘¥ÑmÍÑÈ°¹åt°(€€€€¨°(€€€…Ñ•½ÉäèÍÑÈ°(€€€­•äèÍÑÈ°(€€€Ù…±Õ”è¹ä°(€€€Ù…±Õ•}ÑåÁ”èÍÑÈð9½¹”€ô9½¹”°(€€€Õ¹¥ÐèÍÑÈð9½¹”€ô9½¹”°(€€€Í½Á”è‘¥ÑmÍÑÈ°¹åtð9½¹”€ô9½¹”°(€€€…±¥…Í•Ìè±¥ÍÑmÍÑÉtð9½¹”€ô9½¹”°(€€€±¥™•å±”èÍÑÈ€ô€‰Õ¹ÍÁ•¥™¥•ˆ°(€€€ÍÕ‰ÑåÁ”èÍÑÈð9½¹”€ô9½¹”°(€€€Í½ÕÉ•}…ÕÑ¡½É¥ÑäèÍÑÈð9½¹”€ô9½¹”°(€€€É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐè‰½½°€ô…±Í”°(€€€•Ù¥‘•¹•}­¥¹èÍÑÈð9½¹”€ô9½¹”°(€€€½Ý¹•ÉÍ¡¥Á}±•Ù•°èÍÑÈð9½¹”€ô9½¹”°(¤€´ø‘¥ÑmÍÑÈ°¹åtè(€€€•Ù¥‘•¹”€ô•Ù¥‘•¹•}™½È¡Í½ÕÉ”°¥Ñ•´°Ù…±Õ”°•Ù¥‘•¹•}­¥¹¤(€€€…ÕÑ¡½É¥Ñä€ôÍ½ÕÉ•}…ÕÑ¡½É¥Ñä½Èì(€€€€€€€€‰•áÁ•É¥µ•¹Ñ}É•ÍÕ±Ðˆè€‰É…Üˆ°(€€€€€€€€‰½¹™¥}Ù…±Õ”ˆè€‰ÁÉ¥µ…Éäˆ°(€€€€€€€€‰Í½ÕÉ•}½‘”ˆè€‰ÁÉ¥µ…Éäˆ°(€€€€€€€€‰É•ÍÕ±Ñ}Ñ…‰±”ˆè€‰™½Éµ…°ˆ°(€€€€€€€€‰ÍÑÉÕÑÕÉ•‘}‘…Ñ„ˆè€‰™½Éµ…°ˆ°(€€€€€€€€‰ÁÉ•Í•¹Ñ…Ñ¥½¹}±…¥´ˆè€‰ÍÕµµ…Éäˆ°(€€€€€€€€‰±…¥´ˆè€‰±…¥´ˆ°(€€€ô¹•Ð¡•Ù¥‘•¹•l‰•Ù¥‘•¹•}­¥¹‰t°€‰ÍÕµµ…Éäˆ¤(€€€…¹‘¥‘…Ñ”€ôì(€€€€€€€€‰…¹‘¥‘…Ñ•}¥ˆèÍÑ…‰±•}¥ (€€€€€€€€€€€€‰…¹‘¥‘…Ñ”ˆ°…Ñ•½Éä°­•ä°Ù…±Õ”°Í½Á”½Èíô°Í½ÕÉ•l‰Í½ÕÉ•}¡…Í ‰t°¥Ñ•µl‰±½…Ñ½È‰t(€€€€€€€€¤°(€€€€€€€€‰…Ñ•½Éäˆè…Ñ•½Éä°(€€€€€€€€‰­•äˆè­•ä°(€€€€€€€€‰Ù…±Õ”ˆèÙ…±Õ”°(€€€€€€€€‰Ù…±Õ•}ÑåÁ”ˆèÙ…±Õ•}ÑåÁ”½È¥¹™•É}Ù…±Õ•}ÑåÁ”¡Ù…±Õ”°Õ¹¥Ð¤°(€€€€€€€€‰Õ¹¥ÐˆèÕ¹¥Ð°(€€€€€€€€‰Í½Á”ˆèÍ½Á”½Èíô°(€€€€€€€€‰…±¥…Í•ÌˆèÍ½ÉÑ•¡Í•Ð¡…±¥…Í•Ì½Èmt¤°­•äõÍÑÈ¹…Í•™½±¤°(€€€€€€€€‰±¥™•å±”ˆè±¥™•å±”°(€€€€€€€€‰ÍÕ‰ÑåÁ”ˆèÍÕ‰ÑåÁ”°(€€€€€€€€‰Í½ÕÉ•}…ÕÑ¡½É¥Ñäˆè…ÕÑ¡½É¥Ñä°(€€€€€€€€‰É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐˆè‰½½°¡É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐ¤°(€€€€€€€€‰•Ù¥‘•¹”ˆè•Ù¥‘•¹”°(€€€ô(€€€¥˜½Ý¹•ÉÍ¡¥Á}±•Ù•°è(€€€€€€€…¹‘¥‘…Ñ•l‰½Ý¹•ÉÍ¡¥Á}±•Ù•°‰t€ô½Ý¹•ÉÍ¡¥Á}±•Ù•°(€€€É•ÑÕÉ¸…¹‘¥‘…Ñ”(()‘•˜•áÁ±¥¥Ñ}…¹‘¥‘…Ñ•Ì¡‘…Ñ„è¹ä°Í½ÕÉ”è‘¥ÑmÍÑÈ°¹åt¤€´ø±¥ÍÑm‘¥ÑmÍÑÈ°¹åutè(€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡‘…Ñ„°‘¥Ð¤½È¹½Ð¥Í¥¹ÍÑ…¹”¡‘…Ñ„¹•Ð ‰™…ÑÌˆ¤°±¥ÍÐ¤è(€€€€€€€É•ÑÕÉ¸mt(€€€…¹‘¥‘…Ñ•Ì€ômt(€€€™½È¥¹‘•à°™…Ð¥¸•¹Õµ•É…Ñ”¡‘…Ñ…l‰™…ÑÌ‰t¤è(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡™…Ð°‘¥Ð¤½È€‰­•äˆ¹½Ð¥¸™…Ð½È€ ‰Ù…±Õ”ˆ¹½Ð¥¸™…Ð…¹€‰…¹½¹¥…±}Ù…±Õ”ˆ¹½Ð¥¸™…Ð¤è(€€€€€€€€€€€½¹Ñ¥¹Õ”(€€€€€€€Ù…±Õ”€ô™…Ð¹•Ð ‰Ù…±Õ”ˆ°™…Ð¹•Ð ‰…¹½¹¥…±}Ù…±Õ”ˆ¤¤(€€€€€€€±½…Ñ½È€ô˜ˆ¹™…ÑÍmí¥¹‘•áõtˆ(€€€€€€€¥Ñ•´€ô‰±½¬¡±½…Ñ½È°©Í½¸¹‘ÕµÁÌ¡™…Ð°•¹ÍÕÉ•}…Í¥¤õ…±Í”°Í½ÉÑ}­•åÌõQÉÕ”¤°™…Ð¹•Ð ‰•Ù¥‘•¹•}­¥¹ˆ°€‰ÍÑÉÕÑÕÉ•‘}‘…Ñ„ˆ¤¤(€€€€€€€­•ä€ô¹½Éµ…±¥é•}Ñ½­•¸¡™…Ñl‰­•ä‰t¤¹É•Á±…” ˆ´ˆ°€‰|ˆ¤(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ” (€€€€€€€€€€€€€€€Í½ÕÉ”°(€€€€€€€€€€€€€€€¥Ñ•´°(€€€€€€€€€€€€€€€…Ñ•½Éäõ™…Ð¹•Ð ‰…Ñ•½Éäˆ¤½È…Ñ•½Éå}™½É}­•ä¡­•ä¤°(€€€€€€€€€€€€€€€­•äõ­•ä°(€€€€€€€€€€€€€€€Ù…±Õ”õÙ…±Õ”°(€€€€€€€€€€€€€€€Ù…±Õ•}ÑåÁ”õ™…Ð¹•Ð ‰Ù…±Õ•}ÑåÁ”ˆ¤°(€€€€€€€€€€€€€€€Õ¹¥Ðõ™…Ð¹•Ð ‰Õ¹¥Ðˆ¤°(€€€€€€€€€€€€€€€Í½Á”õ™…Ð¹•Ð ‰Í½Á”ˆ¤¥˜¥Í¥¹ÍÑ…¹”¡™…Ð¹•Ð ‰Í½Á”ˆ¤°‘¥Ð¤•±Í”íô°(€€€€€€€€€€€€€€€…±¥…Í•ÌõmÍÑÈ¡Ù…±Õ”¤™½ÈÙ…±Õ”¥¸™…Ð¹•Ð ‰…±¥…Í•Ìˆ°mt¥t°(€€€€€€€€€€€€€€€±¥™•å±”õ™…Ð¹•Ð ‰±¥™•å±”ˆ°€‰Õ¹ÍÁ•¥™¥•ˆ¤°(€€€€€€€€€€€€€€€ÍÕ‰ÑåÁ”õ™…Ð¹•Ð ‰ÍÕ‰ÑåÁ”ˆ¤°(€€€€€€€€€€€€€€€Í½ÕÉ•}…ÕÑ¡½É¥Ñäõ™…Ð¹•Ð ‰Í½ÕÉ•}…ÕÑ¡½É¥Ñäˆ¤°(€€€€€€€€€€€€€€€É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐõ‰½½°¡™…Ð¹•Ð ‰É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐˆ°…±Í”¤¤°(€€€€€€€€€€€€€€€•Ù¥‘•¹•}­¥¹õ™…Ð¹•Ð ‰•Ù¥‘•¹•}­¥¹ˆ¤°(€€€€€€€€€€€€€€€½Ý¹•ÉÍ¡¥Á}±•Ù•°õ™…Ð¹•Ð ‰½Ý¹•ÉÍ¡¥Á}±•Ù•°ˆ¤°(€€€€€€€€€€€€¤(€€€€€€€€¤(€€€É•ÑÕÉ¸…¹‘¥‘…Ñ•Ì(()‘•˜…¹‘¥‘…Ñ•Í}™É½µ}‰±½¬¡Í½ÕÉ”è‘¥ÑmÍÑÈ°¹åt°¥Ñ•´è‘¥ÑmÍÑÈ°¹åt¤€´ø±¥ÍÑm‘¥ÑmÍÑÈ°¹åutè(€€€Ñ•áÐ€ô¥Ñ•µl‰Ñ•áÐ‰t(€€€…¹‘¥‘…Ñ•Ìè±¥ÍÑm‘¥ÑmÍÑÈ°¹åut€ômt(€€€™½Èµ…Ñ ¥¸5QI%}AQQI8¹™¥¹‘¥Ñ•È¡Ñ•áÐ¤è(€€€€€€€±…‰•°€ôµ…Ñ ¹É½ÕÀ ‰±…‰•°ˆ¤(€€€€€€€­•ä°‘•™¥¹¥Ñ¥½¸€ôµ•ÑÉ¥}­•ä¡±…‰•°¤(€€€€€€€É…Ý}Ù…±Õ”€ôµ…Ñ ¹É½ÕÀ ‰Ù…±Õ”ˆ¤(€€€€€€€Õ¹¥Ð€ôµ…Ñ ¹É½ÕÀ ‰Õ¹¥Ðˆ¤(€€€€€€€Ù…±Õ”è¹ä€ô™±½…Ð¡É…Ý}Ù…±Õ”¤¥˜€ˆ¸ˆ¥¸É…Ý}Ù…±Õ”•±Í”¥¹Ð¡É…Ý}Ù…±Õ”¤(€€€€€€€•Ù¥‘•¹•}­¥¹€ô¥Ñ•µl‰•Ù¥‘•¹•}­¥¹‰t(€€€€€€€É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐ€ô­•ä€ôô€‰Á•É™½Éµ…¹•}¥µÁÉ½Ù•µ•¹Ðˆ(€€€€€€€¥˜É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐ…¹•Ù¥‘•¹•}­¥¹¹½Ð¥¸ì‰É•ÍÕ±Ñ}Ñ…‰±”ˆ°€‰•áÁ•É¥µ•¹Ñ}É•ÍÕ±Ðˆ°€‰½¹™¥}Ù…±Õ”‰ôè(€€€€€€€€€€€•Ù¥‘•¹•}­¥¹€ô€‰±…¥´ˆ(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ” (€€€€€€€€€€€€€€€Í½ÕÉ”°(€€€€€€€€€€€€€€€¥Ñ•´°(€€€€€€€€€€€€€€€…Ñ•½Éäô‰µ•ÑÉ¥Œˆ°(€€€€€€€€€€€€€€€­•äõ­•ä°(€€€€€€€€€€€€€€€Ù…±Õ”õÙ…±Õ”°(€€€€€€€€€€€€€€€Ù…±Õ•}ÑåÁ”ô‰Á•É•¹Ñ…”ˆ¥˜Õ¹¥Ð…¹Õ¹¥Ð¹…Í•™½± ¤¥¸ìˆ”ˆ°€‰Á•É•¹Ðˆ°€‰ÁÀ‰ô•±Í”€‰¹Õµ‰•Èˆ°(€€€€€€€€€€€€€€€Õ¹¥ÐõÕ¹¥Ð°(€€€€€€€€€€€€€€€Í½Á”õ¥¹™•É}Í½Á”¡Ñ•áÐ°‘•™¥¹¥Ñ¥½¸¤°(€€€€€€€€€€€€€€€É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐõÉ•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐ°(€€€€€€€€€€€€€€€•Ù¥‘•¹•}­¥¹õ•Ù¥‘•¹•}­¥¹°(€€€€€€€€€€€€¤(€€€€€€€€¤((€€€™½Èµ…Ñ ¥¸95}AQQI8¹™¥¹‘¥Ñ•È¡Ñ•áÐ¤è(€€€€€€€±…‰•°€ô¹½Éµ…±¥é•}Ñ½­•¸¡µ…Ñ ¹É½ÕÀ ‰±…‰•°ˆ¤¤(€€€€€€€Ù…±Õ”€ôµ…Ñ ¹É½ÕÀ ‰Ù…±Õ”ˆ¤¹ÍÑÉ¥À ¤(€€€€€€€ÅÕ…±¥™¥•È€ô¹½Éµ…±¥é•}Ñ½­•¸¡µ…Ñ ¹É½ÕÀ ‰ÅÕ…°ˆ¤½È€ˆˆ¤(€€€€€€€¥˜€‹¦†çžn¸ˆ¥¸±…‰•°½È±…‰•°€ôô€‰ÁÉ½©•Ðµ¹…µ”ˆè(€€€€€€€€€€€­•ä°…Ñ•½Éä€ô€‰ÁÉ½©•Ñ}¹…µ”ˆ°€‰ÁÉ½©•Ñ}¥‘•¹Ñ¥Ñäˆ(€€€€€€€•±¥˜€‹š¢‡–v\ˆ¥¸±…‰•°½È±…‰•°€ôô€‰µ½‘Õ±”µ¹…µ”ˆè(€€€€€€€€€€€­•ä°…Ñ•½Éä€ô€‰µ½‘Õ±•}¹…µ”ˆ°€‰µ½‘•±}µ•Ñ¡½ˆ(€€€€€€€•±Í”è(€€€€€€€€€€€­•ä°…Ñ•½Éä€ô€‰µ½‘•±}¹…µ”ˆ°€‰µ½‘•±}µ•Ñ¡½ˆ(€€€€€€€±¥™•å±”€ô€‰Õ¹ÍÁ•¥™¥•ˆ(€€€€€€€¥˜…¹ä¡Ñ½­•¸¥¸ÅÕ…±¥™¥•È™½ÈÑ½­•¸¥¸€ ‹š^œˆ°€‰½±ˆ°€‰‘•ÁÉ•…Ñ•ˆ°€‰½ÕÑ‘…Ñ•ˆ¤¤è(€€€€€€€€€€€±¥™•å±”€ô€‰½±ˆ(€€€€€€€•±¥˜…¹ä¡Ñ½­•¸¥¸ÅÕ…±¥™¥•È™½ÈÑ½­•¸¥¸€ ‹šZÀˆ°€‹–öO–&4ˆ°€‹–ÞËž†»¢ºˆ°€‰ÕÉÉ•¹Ðˆ°€‰½¹™¥Éµ•ˆ°€‰¹•Üˆ¤¤è(€€€€€€€€€€€±¥™•å±”€ô€‰ÕÉÉ•¹Ðˆ(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ”¡Í½ÕÉ”°¥Ñ•´°…Ñ•½Éäõ…Ñ•½Éä°­•äõ­•ä°Ù…±Õ”õÙ…±Õ”°±¥™•å±”õ±¥™•å±”°Í½Á”õ¥¹™•É}Í½Á”¡Ñ•áÐ¤¤(€€€€€€€€¤((€€€‘…Ñ•}µ…Ñ €ôQ}AQQI8¹Í•…É ¡Ñ•áÐ¤(€€€¥˜‘…Ñ•}µ…Ñ è(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ” (€€€€€€€€€€€€€€€Í½ÕÉ”°(€€€€€€€€€€€€€€€¥Ñ•´°(€€€€€€€€€€€€€€€…Ñ•½Éäô‰Ñ¥µ•±¥¹•}Ù•ÉÍ¥½¸ˆ°(€€€€€€€€€€€€€€€­•äô‰ÁÉ½©•Ñ}‘…Ñ”ˆ¥˜É”¹Í•…É ¡È‹¦†çžn¹ñÁÉ½©•Ðˆ°‘…Ñ•}µ…Ñ ¹É½ÕÀ À¤°É”¹$¤•±Í”€‰•áÁ•É¥µ•¹Ñ}‘…Ñ”ˆ°(€€€€€€€€€€€€€€€Ù…±Õ”õ‘…Ñ•}µ…Ñ ¹É½ÕÀ ‰Ù…±Õ”ˆ¤°(€€€€€€€€€€€€€€€Ù…±Õ•}ÑåÁ”ô‰‘…Ñ”ˆ°(€€€€€€€€€€€€€€€Í½Á”õ¥¹™•É}Í½Á”¡Ñ•áÐ¤°(€€€€€€€€€€€€¤(€€€€€€€€¤(€€€Ù•ÉÍ¥½¹}µ…Ñ €ôYIM%=9}AQQI8¹Í•…É ¡Ñ•áÐ¤(€€€¥˜Ù•ÉÍ¥½¹}µ…Ñ è(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ” (€€€€€€€€€€€€€€€Í½ÕÉ”°(€€€€€€€€€€€€€€€¥Ñ•´°(€€€€€€€€€€€€€€€…Ñ•½Éäô‰Ñ¥µ•±¥¹•}Ù•ÉÍ¥½¸ˆ°(€€€€€€€€€€€€€€€­•äô‰µ½‘•±}Ù•ÉÍ¥½¸ˆ¥˜É”¹Í•…É ¡È‹š¢‡–z-ñµ½‘•°ˆ°Ù•ÉÍ¥½¹}µ…Ñ ¹É½ÕÀ À¤°É”¹$¤•±Í”€‰ÁÉ½©•Ñ}Ù•ÉÍ¥½¸ˆ°(€€€€€€€€€€€€€€€Ù…±Õ”õÙ•ÉÍ¥½¹}µ…Ñ ¹É½ÕÀ ‰Ù…±Õ”ˆ¤°(€€€€€€€€€€€€€€€Ù…±Õ•}ÑåÁ”ô‰Ù•ÉÍ¥½¸ˆ°(€€€€€€€€€€€€€€€Í½Á”õ¥¹™•É}Í½Á”¡Ñ•áÐ¤°(€€€€€€€€€€€€¤(€€€€€€€€¤((€€€½Ý¹•ÉÍ¡¥Á}Í¥¹…°€ôÉ”¹Í•…É ¡È‹ž.³ž®,¹ìÀ°ÈÁô üë–£¦¡óš&šr%ó–£šÖž¢,¥ñÍ¥¹±•l´u¡…¹‘•‘ñÍ½±•±äˆ°Ñ•áÐ°É”¹$¤(€€€Á…ÉÑ¥…±}Í¥¹…°€ôÉ”¹Í•…É ¡È‹¢Ò¢ÒŒ¹ìÀ°àÁô üëšVÓžBóš‚šÎ¡ó¦£–"ó–g’öp¥ñ½¹ÑÉ¥‰ÕÐ üé•‘ñ¥½¸¤¹ìÀ°àÁô üéÁ…ÉÑ¥…±ñ…¹¹½Ñ…Ñ¥½¹ñÝÉ¥Ñ¥¹œ¤ˆ°Ñ•áÐ°É”¹$¤(€€€¥˜½Ý¹•ÉÍ¡¥Á}Í¥¹…°½ÈÁ…ÉÑ¥…±}Í¥¹…°è(€€€€€€€±•Ù•°€ô€‰Í½±”ˆ¥˜½Ý¹•ÉÍ¡¥Á}Í¥¹…°•±Í”€‰Á…ÉÑ¥…°ˆ(€€€€€€€½Ý¹•ÉÍ¡¥Á}Ù…±Õ”€ô¥Ñ•´¹•Ð ‰ÍÑÉÕÑÕÉ•‘}Ù…±Õ”ˆ¤(€€€€€€€¥˜½Ý¹•ÉÍ¡¥Á}Ù…±Õ”¥Ì9½¹”è(€€€€€€€€€€€½Ý¹•ÉÍ¡¥Á}Ù…±Õ”€ôÑ•áÐ(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ” (€€€€€€€€€€€€€€€Í½ÕÉ”°(€€€€€€€€€€€€€€€¥Ñ•´°(€€€€€€€€€€€€€€€…Ñ•½Éäô‰½¹ÑÉ¥‰ÕÑ¥½¸ˆ°(€€€€€€€€€€€€€€€­•äô‰Á•ÉÍ½¹…±}½¹ÑÉ¥‰ÕÑ¥½¸ˆ°(€€€€€€€€€€€€€€€Ù…±Õ”õÑÉÕ¹…Ñ”¡½Ý¹•ÉÍ¡¥Á}Ù…±Õ”°€ÌÀÀ¤°(€€€€€€€€€€€€€€€ÍÕ‰ÑåÁ”ô‰=]9IM!%@ˆ°(€€€€€€€€€€€€€€€½Ý¹•ÉÍ¡¥Á}±•Ù•°õ±•Ù•°°(€€€€€€€€€€€€€€€•Ù¥‘•¹•}­¥¹ô‰½¹ÑÉ¥‰ÕÑ¥½¹}ÍÑ…Ñ•µ•¹Ðˆ°(€€€€€€€€€€€€¤(€€€€€€€€¤((€€€ÍÑ…ÑÕÍ}Á…ÑÑ•É¹Ì€ôl(€€€€€€€€¡È‹–ÞË¦£žöÉó¦£žöË’â+žêýñq‰‘•Á±½å•‘qˆˆ°€‰‘•Á±½åµ•¹Ðˆ°€‰‘•Á±½åµ•¹Ñ}ÍÑ…ÑÕÌˆ¤°(€€€€€€€€¡È‹¢úû–"Ã¦£žöË¢ššÆ	óšî‡¢ÚÏ¦£žöË¢ššÆ	ó–>¿¦£žöÉñ‘•Á±½åµ•¹Ñl´uÉ•…‘åñµ••ÑÌýqÌ­‘•Á±½åµ•¹ÑqÌ­É•ÅÕ¥É•µ•¹ÑÌüˆ°€‰‘•Á±½åµ•¹Ðˆ°€‰‘•Á±½åµ•¹Ñ}É•…‘¥¹•ÍÌˆ¤°(€€€€€€€€¡È‹–ÞË–òšêAñq‰½Á•¹l´uÍ½ÕÉ” üé¤ýqˆˆ°€‰½Á•¹¹•ÍÌˆ°€‰½Á•¹}Í½ÕÉ•}ÍÑ…ÑÕÌˆ¤°(€€€€€€€€¡È‹žr–ºx üë–rëšf¼¤ÿšÖ/¢¾Uó–º{–rÃšÖ/¢¾UñÉ•…±l´uÝ½É±‘qÌ­Ñ•ÍÐˆ°€‰Ñ•ÍÑ¥¹œˆ°€‰É•…±}Ñ•ÍÑ}ÍÑ…ÑÕÌˆ¤°(€€€t(€€€™½È•áÁÉ•ÍÍ¥½¸°…Ñ•½Éä°­•ä¥¸ÍÑ…ÑÕÍ}Á…ÑÑ•É¹Ìè(€€€€€€€¥˜É”¹Í•…É ¡•áÁÉ•ÍÍ¥½¸°Ñ•áÐ°É”¹$¤è(€€€€€€€€€€€­¥¹€ô¥Ñ•µl‰•Ù¥‘•¹•}­¥¹‰t(€€€€€€€€€€€ÁÉ½½˜€ô­¥¹¥¸ì‰•áÁ•É¥µ•¹Ñ}É•ÍÕ±Ðˆ°€‰½¹™¥}Ù…±Õ”ˆ°€‰Í½ÕÉ•}½‘”ˆ°€‰É•ÍÕ±Ñ}Ñ…‰±”‰ô(€€€€€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ” (€€€€€€€€€€€€€€€€€€€Í½ÕÉ”°(€€€€€€€€€€€€€€€€€€€¥Ñ•´°(€€€€€€€€€€€€€€€€€€€…Ñ•½Éäõ…Ñ•½Éä°(€€€€€€€€€€€€€€€€€€€­•äõ­•ä°(€€€€€€€€€€€€€€€€€€€Ù…±Õ”õQÉÕ”°(€€€€€€€€€€€€€€€€€€€Ù…±Õ•}ÑåÁ”ô‰‰½½±•…¸ˆ°(€€€€€€€€€€€€€€€€€€€É•ÅÕ¥É•Í}ÍÕÁÁ½ÉÐõQÉÕ”°(€€€€€€€€€€€€€€€€€€€•Ù¥‘•¹•}­¥¹õ­¥¹¥˜ÁÉ½½˜•±Í”€‰±…¥´ˆ°(€€€€€€€€€€€€€€€€¤(€€€€€€€€€€€€¤((€€€¥˜É”¹Í•…É ¡Èˆ üë–Æ¦fAó¦fC–"Ùñ±¥µ¥Ñ…Ñ¥½¸¤ˆ°Ñ•áÐ°É”¹$¤è(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹¡µ…­•}…¹‘¥‘…Ñ”¡Í½ÕÉ”°¥Ñ•´°…Ñ•½Éäô‰±¥µ¥Ñ…Ñ¥½¸ˆ°­•äô‰±¥µ¥Ñ…Ñ¥½¸ˆ°Ù…±Õ”õÑÉÕ¹…Ñ”¡Ñ•áÐ°€ÌÀÀ¤¤¤(€€€¥˜É”¹Í•…É ¡Èˆ üë’î–º3š"Aó–Âkšr©ó–öO–&7¢úçžV1ó–º3š"C¢úçžV1ñÁÉ½Ñ½ÑåÁ•qÌ­½¹±ä¤ˆ°Ñ•áÐ°É”¹$¤è(€€€€€€€…¹‘¥‘…Ñ•Ì¹…ÁÁ•¹ (€€€€€€€€€€€µ…­•}…¹‘¥‘…Ñ”¡Í½ÕÉ”°¥Ñ•´°…Ñ•½Éäô‰½µÁ±•Ñ¥½¹}‰½Õ¹‘…Éäˆ°­•äô‰½µÁ±•Ñ¥½¹}‰½Õ¹‘…Éäˆ°Ù…±Õ”õÑÉÕ¹…Ñ”¡Ñ•áÐ°€ÌÀÀ¤¤(€€€€€€€€¤(€€€É•ÑÕÉ¸…¹‘¥‘…Ñ•Ì(()‘•˜‘•‘ÕÁ±¥…Ñ•}…¹‘¥‘…Ñ•Ì¡…¹‘¥‘…Ñ•Ìè%Ñ•É…‰±•m‘¥ÑmÍÑÈ°¹åut¤€´ø±¥ÍÑm‘¥ÑmÍÑÈ°¹åutè(€€€É•ÍÕ±Ðè±¥ÍÑm‘¥ÑmÍÑÈ°¹åut€ômt(€€€Í••¸èÍ•ÑmÑÕÁ±•m¹ä°€¸¸¹ut€ôÍ•Ð ¤(€€€™½È…¹‘¥‘…Ñ”¥¸…¹‘¥‘…Ñ•Ìè(€€€€€€€•Ù¥‘•¹”€ô…¹‘¥‘…Ñ•l‰•Ù¥‘•¹”‰t(€€€€€€€Í¥¹…ÑÕÉ”€ô€ (€€€€€€€€€€€…¹‘¥‘…Ñ•l‰…Ñ•½Éä‰t°(€€€€€€€€€€€…¹‘¥‘…Ñ•l‰­•ä‰t°(€€€€€€€€€€€©Í½¸¹‘ÕµÁÌ¡…¹‘¥‘…Ñ•l‰Ù…±Õ”‰t°•¹ÍÕÉ•}…Í¥¤õ…±Í”°Í½ÉÑ}­•åÌõQÉÕ”¤°(€€€€€€€€€€€©Í½¸¹‘ÕµÁÌ¡…¹‘¥‘…Ñ•l‰Í½Á”‰t°•¹ÍÕÉ•}…Í¥¤õ…±Í”°Í½ÉÑ}­•åÌõQÉÕ”¤°(€€€€€€€€€€€•Ù¥‘•¹•l‰Í½ÕÉ•}¡…Í ‰t°(€€€€€€€€€€€•Ù¥‘•¹•l‰±½…Ñ½È‰t°(€€€€€€€€¤(€€€€€€€¥˜Í¥¹…ÑÕÉ”¥¸Í••¸è(€€€€€€€€€€€½¹Ñ¥¹Õ”(€€€€€€€Í••¸¹…‘¡Í¥¹…ÑÕÉ”¤(€€€€€€€É•ÍÕ±Ð¹…ÁÁ•¹¡…¹‘¥‘…Ñ”¤(€€€É•ÍÕ±Ð¹Í½ÉÐ (€€€€€€€­•äõ±…µ‰‘„…¹‘¥‘…Ñ”è€ (€€€€€€€€€€€…¹‘¥‘…Ñ•l‰…Ñ•½Éä‰t°(€€€€€€€€€€€…¹‘¥‘…Ñ•l‰­•ä‰t°(€€€€€€€€€€€…¹‘¥‘…Ñ•l‰•Ù¥‘•¹”‰ul‰Í½ÕÉ•}Á…Ñ ‰t¹…Í•™½± ¤°(€€€€€€€€€€€…¹‘¥‘…Ñ•l‰•Ù¥‘•¹”‰ul‰±½…Ñ½È‰t°(€€€€€€€€€€€…¹‘¥‘…Ñ•l‰…¹‘¥‘…Ñ•}¥‰t°(€€€€€€€€¤(€€€€¤(€€€É•ÑÕÉ¸É•ÍÕ±Ð(()‘•˜•áÑÉ…Ñ}µ…¹¥™•ÍÐ¡µ…¹¥™•ÍÐè‘¥ÑmÍÑÈ°¹åt¤€´ø‘¥ÑmÍÑÈ°¹åtè(€€€‘½Õµ•¹ÑÌ€ômt(€€€…¹‘¥‘…Ñ•Ìè±¥ÍÑm‘¥ÑmÍÑÈ°¹åut€ômt(€€€™½ÈÍ½ÕÉ”¥¸µ…¹¥™•ÍÐ¹•Ð ‰Í½ÕÉ•Ìˆ°mt¤è(€€€€€€€Á…Ñ €ôA…Ñ ¡Í½ÕÉ•l‰…‰Í½±ÕÑ•}Á…Ñ ‰t¤(€€€€€€€‰•™½É”€ôÍ¡„ÈÔÙ}™¥±”¡Á…Ñ ¤(€€€€€€€¥˜‰•™½É”€„ôÍ½ÕÉ•l‰Í½ÕÉ•}¡…Í ‰tè(€€€€€€€€€€€É…¥Í”IÕ¹Ñ¥µ•ÉÉ½È¡˜‰M½ÕÉ”¡…¹•…™Ñ•ÈÍ…¹¹¥¹œèíÍ½ÕÉ•lÍ½ÕÉ•}Á…Ñ uôˆ¤(€€€€€€€‰±½­Ì°Ý…É¹¥¹Ì°ÍÑÉÕÑÕÉ•€ô•áÑÉ…Ñ}‘½Õµ•¹Ð¡Á…Ñ °Í½ÕÉ•l‰Í½ÕÉ•}ÑåÁ”‰t¤(€€€€€€€Í½ÕÉ•}…¹‘¥‘…Ñ•Ì€ô•áÁ±¥¥Ñ}…¹‘¥‘…Ñ•Ì¡ÍÑÉÕÑÕÉ•°Í½ÕÉ”¤(€€€€€€€¡…Í}•áÁ±¥¥Ñ}™…Ñ}±¥ÍÐ€ô‰½½°¡Í½ÕÉ•}…¹‘¥‘…Ñ•Ì¤(€€€€€€€™½È¥Ñ•´¥¸‰±½­Ìè(€€€€€€€€€€€¥˜¡…Í}•áÁ±¥¥Ñ}™…Ñ}±¥ÍÐ…¹ÍÑÈ¡¥Ñ•´¹•Ð ‰±½…Ñ½Èˆ°€ˆˆ¤¤¹ÍÑ…ÉÑÍÝ¥Ñ  ˆ¹™…ÑÍlˆ¤è(€€€€€€€€€€€€€€€½¹Ñ¥¹Õ”(€€€€€€€€€€€Í½ÕÉ•}…¹‘¥‘…Ñ•Ì¹•áÑ•¹¡…¹‘¥‘…Ñ•Í}™É½µ}‰±½¬¡Í½ÕÉ”°¥Ñ•´¤¤(€€€€€€€…™Ñ•È€ôÍ¡„ÈÔÙ}™¥±”¡Á…Ñ ¤(€€€€€€€¥˜‰•™½É”€„ô…™Ñ•Èè(€€€€€€€€€€€É…¥Í”IÕ¹Ñ¥µ•ÉÉ½È¡˜‰I•…µ½¹±ä¥¹Ñ•É¥Ñä™…¥±ÕÉ”èíÍ½ÕÉ•lÍ½ÕÉ•}Á…Ñ uô¡…¹•‘ÕÉ¥¹œ•áÑÉ…Ñ¥½¸ˆ¤(€€€€€€€…¹‘¥‘…Ñ•Ì¹•áÑ•¹¡Í½ÕÉ•}…¹‘¥‘…Ñ•Ì¤(€€€€€€€‘½Õµ•¹ÑÌ¹…ÁÁ•¹ (€€€€€€€€€€€ì(€€€€€€€€€€€€€€€€‰Í½ÕÉ•}Á…Ñ ˆèÍ½ÕÉ•l‰Í½ÕÉ•}Á…Ñ ‰t°(€€€€€€€€€€€€€€€€‰Í½ÕÉ•}ÑåÁ”ˆèÍ½ÕÉ•l‰Í½ÕÉ•}ÑåÁ”‰t°(€€€€€€€€€€€€€€€€‰Í½ÕÉ•}¡…Í ˆèÍ½ÕÉ•l‰Í½ÕÉ•}¡…Í ‰t°(€€€€€€€€€€€€€€€€‰µ½‘¥™¥•‘}…ÐˆèÍ½ÕÉ•l‰µ½‘¥™¥•‘}…Ð‰t°(€€€€€€€€€€€€€€€€‰Í¥é•}‰åÑ•ÌˆèÍ½ÕÉ•l‰Í¥é•}‰åÑ•Ì‰t°(€€€€€€€€€€€€€€€€‰‰±½­}½Õ¹Ðˆè±•¸¡‰±½­Ì¤°(€€€€€€€€€€€€€€€€‰…¹‘¥‘…Ñ•}½Õ¹Ðˆè±•¸¡‘•‘ÕÁ±¥…Ñ•}…¹‘¥‘…Ñ•Ì¡Í½ÕÉ•}…¹‘¥‘…Ñ•Ì¤¤°(€€€€€€€€€€€€€€€€‰Ý…É¹¥¹ÌˆèÝ…É¹¥¹Ì°(€€€€€€€€€€€€€€€€‰‰±½­Ìˆè‰±½­Ì°(€€€€€€€€€€€ô(€€€€€€€€¤(€€€™¥¹…±}…¹‘¥‘…Ñ•Ì€ô‘•‘ÕÁ±¥…Ñ•}…¹‘¥‘…Ñ•Ì¡…¹‘¥‘…Ñ•Ì¤(€€€É•ÑÕÉ¸ì(€€€€€€€€‰•Ù¥‘•¹•}Ù•ÉÍ¥½¸ˆè€ˆÄ¸Àˆ°(€€€€€€€€‰•Ù¥‘•¹•}¥ˆèÍÑ…‰±•}¥ ‰•Ù¥‘•¹”µÍ•Ðˆ°µ…¹¥™•ÍÐ¹•Ð ‰µ…¹¥™•ÍÑ}¥ˆ¤°ml‰…¹‘¥‘…Ñ•}¥‰t™½ÈŒ¥¸™¥¹…±}…¹‘¥‘…Ñ•Ít¤°(€€€€€€€€‰•¹•É…Ñ•‘}…ÐˆèÕÑ}¹½Ü ¤°(€€€€€€€€‰µ…¹¥™•ÍÑ}¥ˆèµ…¹¥™•ÍÐ¹•Ð ‰µ…¹¥™•ÍÑ}¥ˆ¤°(€€€€€€€€‰É½½Ðˆèµ…¹¥™•ÍÐ¹•Ð ‰É½½Ðˆ¤°(€€€€€€€€‰µ…Ñ•É¥…±Ìˆèl(€€€€€€€€€€€ì(€€€€€€€€€€€€€€€­•äè‘½Õµ•¹Ñm­•åt(€€€€€€€€€€€€€€€™½È­•ä¥¸€ ‰Í½ÕÉ•}Á…Ñ ˆ°€‰Í½ÕÉ•}ÑåÁ”ˆ°€‰Í½ÕÉ•}¡…Í ˆ°€‰µ½‘¥™¥•‘}…Ðˆ°€‰Í¥é•}‰åÑ•Ìˆ°€‰Ý…É¹¥¹Ìˆ¤(€€€€€€€€€€€ô(€€€€€€€€€€€™½È‘½Õµ•¹Ð¥¸‘½Õµ•¹ÑÌ(€€€€€€€t°(€€€€€€€€‰‘½Õµ•¹ÑÌˆè‘½Õµ•¹ÑÌ°(€€€€€€€€‰…¹‘¥‘…Ñ•Ìˆè™¥¹…±}…¹‘¥‘…Ñ•Ì°(€€€€€€€€‰Ý…É¹¥¹Ìˆèl(€€€€€€€€€€€˜‰í‘½Õµ•¹ÑlÍ½ÕÉ•}Á…Ñ uôèíÝ…É¹¥¹ôˆ(€€€€€€€€€€€™½È‘½Õµ•¹Ð¥¸‘½Õµ•¹ÑÌ(€€€€€€€€€€€™½ÈÝ…É¹¥¹œ¥¸‘½Õµ•¹Ð¹•Ð ‰Ý…É¹¥¹Ìˆ°mt¤(€€€€€€€€€€€¥˜€‰•½‘•…Ìˆ¹½Ð¥¸Ý…É¹¥¹œ(€€€€€€€t°(€€€ô(()‘•˜Á…ÉÍ•}…ÉÌ ¤€´ø…ÉÁ…ÉÍ”¹9…µ•ÍÁ…”è(€€€Á…ÉÍ•È€ô…ÉÁ…ÉÍ”¹ÉÕµ•¹ÑA…ÉÍ•È¡‘•ÍÉ¥ÁÑ¥½¸ô‰áÑÉ…ÐÁÉ•¥Í”°É•…µ½¹±ä•Ù¥‘•¹”™É½´„Í½ÕÉ”µ…¹¥™•ÍÐ¸ˆ¤(€€€Á…ÉÍ•È¹…‘‘}…ÉÕµ•¹Ð ˆ´µµ…¹¥™•ÍÐˆ°É•ÅÕ¥É•õQÉÕ”°¡•±Àô‰A…Ñ É•…Ñ•‰äÍ…¹}Í½ÕÉ•Ì¹Áä¸ˆ¤(€€€Á…ÉÍ•È¹…‘‘}…ÉÕµ•¹Ð ˆ´µ½ÕÑÁÕÐˆ°É•ÅÕ¥É•õQÉÕ”°¡•±Àô‰=ÕÑÁÕÐ•Ù¥‘•¹”¹©Í½¸Á…Ñ ¸ˆ¤(€€€É•ÑÕÉ¸Á…ÉÍ•È¹Á…ÉÍ•}…ÉÌ ¤(()‘•˜µ…¥¸ ¤€´ø¥¹Ðè(€€€…ÉÌ€ôÁ…ÉÍ•}…ÉÌ ¤(€€€µ…¹¥™•ÍÐ€ôÉ•…‘}©Í½¸¡A…Ñ ¡…ÉÌ¹µ…¹¥™•ÍÐ¤¤(€€€¥˜±•¸¡µ…¹¥™•ÍÐ¹•Ð ‰Í½ÕÉ•Ìˆ°mt¤¤€ð€Èè(€€€€€€€ÁÉ¥¹Ð ‰II=Hè•Ù¥‘•¹”•áÑÉ…Ñ¥½¸™½ÈÑ¡¥ÌM­¥±°É•ÅÕ¥É•Ì…Ð±•…ÍÐÑÝ¼Í½ÕÉ•Ì¸ˆ¤(€€€€€€€É•ÑÕÉ¸€È(€€€ÑÉäè(€€€€€€€Á…å±½…€ô•áÑÉ…Ñ}µ…¹¥™•ÍÐ¡µ…¹¥™•ÍÐ¤(€€€•á•ÁÐ€¡=MÉÉ½È°Y…±Õ•ÉÉ½È°IÕ¹Ñ¥µ•ÉÉ½È¤…Ì•áŒè(€€€€€€€ÁÉ¥¹Ð¡˜‰II=Hèí•áôˆ¤(€€€€€€€É•ÑÕÉ¸€Ä(€€€¡…¹•°™¥¹…±}Á…å±½…€ôÝÉ¥Ñ•}©Í½¹}¥‘•µÁ½Ñ•¹Ð¡A…Ñ ¡…ÉÌ¹½ÕÑÁÕÐ¤°Á…å±½…¤(€€€…Ñ¥½¸€ô€‰]É½Ñ”ˆ¥˜¡…¹••±Í”€‰U¹¡…¹•ˆ(€€€ÁÉ¥¹Ð¡˜‰í…Ñ¥½¹ôèíA…Ñ ¡…ÉÌ¹½ÕÑÁÕÐ¤¹É•Í½±Ù” ¥ô€¡í±•¸¡™¥¹…±}Á…å±½…‘l…¹‘¥‘…Ñ•Ìt¥ô…¹‘¥‘…Ñ•Ì¤ˆ¤(€€€™½ÈÝ…É¹¥¹œ¥¸™¥¹…±}Á…å±½…¹•Ð ‰Ý…É¹¥¹Ìˆ°mt¤è(€€€€€€€ÁÉ¥¹Ð¡˜‰]I9%9èíÝ…É¹¥¹ôˆ¤(€€€É•ÑÕÉ¸€À(()¥˜}}¹…µ•}|€ôô€‰}}µ…¥¹}|ˆè(€€€É…¥Í”MåÍÑ•µá¥Ð¡µ…¥¸ ¤¤(
+                    elif value_node is None or value_node.text is None:
+                        continue
+                    elif cell_type == "s":
+                        index = int(value_node.text)
+                        value = strings[index] if 0 <= index < len(strings) else value_node.text
+                    elif cell_type == "b":
+                        value = value_node.text == "1"
+                    else:
+                        value = parse_scalar(value_node.text)
+                    formula = cell.find("x:f", namespace)
+                    excerpt = f"{reference} = {value}"
+                    if formula is not None and formula.text:
+                        excerpt += f" (formula: {formula.text})"
+                    blocks.append(block(f'sheet "{sheet_name}", cell {reference}', excerpt, "result_table", value))
+    except (OSError, KeyError, ValueError, IndexError, zipfile.BadZipFile, ET.ParseError) as exc:
+        warnings.append(f"XLSX extraction failed without modifying the source: {exc}")
+    return blocks, warnings, None
+
+
+def extract_pdf(path: Path) -> tuple[list[dict[str, Any]], list[str], Any]:
+    blocks: list[dict[str, Any]] = []
+    warnings: list[str] = []
+    reader_class = None
+    reader_name = ""
+    for module_name in ("pypdf", "PyPDF2"):
+        try:
+            module = importlib.import_module(module_name)
+            reader_class = module.PdfReader
+            reader_name = module_name
+            break
+        except ModuleNotFoundError:
+            continue
+    if reader_class is not None:
+        try:
+            reader = reader_class(str(path))
+            for page_number, page in enumerate(reader.pages, start=1):
+                text = page.extract_text() or ""
+                if text.strip():
+                    blocks.append(block(f"page {page_number}", text, "narrative"))
+            warnings.append(f"PDF extracted with optional dependency {reader_name}.")
+            return blocks, warnings, None
+        except Exception as exc:
+            warnings.append(f"{reader_name} could not extract this PDF: {exc}")
+            return blocks, warnings, None
+    try:
+        pdfplumber = importlib.import_module("pdfplumber")
+        with pdfplumber.open(path) as document:
+            for page_number, page in enumerate(document.pages, start=1):
+                text = page.extract_text() or ""
+                if text.strip():
+                    blocks.append(block(f"page {page_number}", text, "narrative"))
+        warnings.append("PDF extracted with optional dependency pdfplumber.")
+    except ModuleNotFoundError:
+        warnings.append("No PDF text dependency found (pypdf, PyPDF2, or pdfplumber); metadata and hash were retained.")
+    except Exception as exc:
+        warnings.append(f"pdfplumber could not extract this PDF: {exc}")
+    return blocks, warnings, None
+
+
+def extract_document(path: Path, source_type: str) -> tuple[list[dict[str, Any]], list[str], Any]:
+    if source_type in {"markdown", "text", "code", "config"}:
+        return extract_text(path, source_type)
+    if source_type == "csv":
+        return extract_csv(path)
+    if source_type == "json":
+        return extract_json(path)
+    if source_type == "yaml":
+        return extract_yaml(path)
+    if source_type == "docx":
+        return extract_docx(path)
+    if source_type == "pptx":
+        return extract_pptx(path)
+    if source_type == "xlsx":
+        return extract_xlsx(path)
+    if source_type == "pdf":
+        return extract_pdf(path)
+    return [], [f"No extractor is available for source type {source_type}."], None
+
+
+def metric_key(label: str) -> tuple[str, str]:
+    token = normalize_token(label).replace(" ", "")
+    if "0.5:0.95" in token or "50-95" in token or "50:95" in token:
+        return "map_0_5_0_95", "mAP@0.5:0.95"
+    if token.startswith("map"):
+        return "map_0_5", "mAP@0.5"
+    mapping = {
+        "precision": ("precision", "precision"),
+        "ç²¾ç¡®çŽ‡": ("precision", "precision"),
+        "recall": ("recall", "recall"),
+        "å¬å›žçŽ‡": ("recall", "recall"),
+        "accuracy": ("accuracy", "accuracy"),
+        "å‡†ç¡®çŽ‡": ("accuracy", "accuracy"),
+        "f1-score": ("f1_score", "F1-score"),
+        "f1score": ("f1_score", "F1-score"),
+        "fps": ("fps", "FPS"),
+        "å¸§çŽ‡": ("fps", "FPS"),
+        "flops": ("flops", "FLOPs"),
+        "flop": ("flops", "FLOPs"),
+        "params": ("parameters", "parameters"),
+        "å‚æ•°é‡": ("parameters", "parameters"),
+        "æ€§èƒ½æå‡": ("performance_improvement", "performance improvement"),
+        "performance-improvement": ("performance_improvement", "performance improvement"),
+    }
+    return mapping.get(token, (re.sub(r"[^a-z0-9]+", "_", token).strip("_") or "metric", label))
+
+
+def infer_scope(text: str, metric_definition: str | None = None) -> dict[str, Any]:
+    scope: dict[str, Any] = {}
+    modality_match = re.search(r"\b(RGB|IR|EL|infrared|visible)\b|çº¢å¤–|å¯è§å…‰|ç”µè‡´å‘å…‰", text, re.I)
+    if modality_match:
+        raw = modality_match.group(0)
+        modality_map = {"infrared": "IR", "çº¢å¤–": "IR", "visible": "RGB", "å¯è§å…‰": "RGB", "ç”µè‡´å‘å…‰": "EL"}
+        scope["modality"] = modality_map.get(raw.casefold(), raw.upper())
+    dataset_match = re.search(r"(?:dataset|æ•°æ®é›†)\s*[:ï¼š=ä¸º]\s*([\w.\-\u4e00-\u9fff]{2,80})", text, re.I)
+    if dataset_match:
+        scope["dataset"] = dataset_match.group(1).rstrip("ï¼›;,ï¼Œã€‚")
+    split_match = re.search(r"(?:data\s*split|æ•°æ®åˆ’åˆ†|split)\s*[:ï¼š=]\s*([^ï¼›;,ï¼Œã€‚]{2,100})", text, re.I)
+    if split_match:
+        scope["data_split"] = split_match.group(1).strip()
+    version_match = re.search(r"(?:model\s*version|æ¨¡åž‹ç‰ˆæœ¬|version|ç‰ˆæœ¬)\s*[:ï¼š=]?\s*(v?\d+(?:\.\d+){0,3})", text, re.I)
+    if version_match:
+        scope["model_version"] = version_match.group(1)
+    iou_match = re.search(r"IoU\s*(?:threshold|é˜ˆå€¼)?\s*[:ï¼š=@]?\s*(0?\.\d+|\d+%)", text, re.I)
+    if iou_match:
+        scope["iou_threshold"] = iou_match.group(1)
+    confidence_match = re.search(r"(?:confidence|ç½®ä¿¡åº¦)\s*(?:threshold|é˜ˆå€¼)?\s*[:ï¼š=]?\s*(0?\.\d+|\d+%)", text, re.I)
+    if confidence_match:
+        scope["confidence_threshold"] = confidence_match.group(1)
+    date_match = re.search(r"\b(20\d{2}[-/.]\d{1,2}(?:[-/.]\d{1,2})?)\b", text)
+    if date_match:
+        scope["experiment_date"] = date_match.group(1)
+    if metric_definition:
+        scope["metric_definition"] = metric_definition
+    return scope
+
+
+def infer_value_type(value: Any, unit: str | None = None) -> str:
+    if isinstance(value, bool):
+        return "boolean"
+    if isinstance(value, (int, float)):
+        return "percentage" if unit and unit.casefold() in {"%", "percent", "pp"} else "number"
+    if isinstance(value, list):
+        return "list"
+    if isinstance(value, dict):
+        return "object"
+    text = normalize_space(value)
+    if unit and unit.casefold() in {"%", "percent", "percentage points", "pp"}:
+        return "percentage"
+    if re.fullmatch(r"[+-]?\d+(?:\.\d+)?%", text):
+        return "percentage"
+    if re.fullmatch(r"[+-]?\d+(?:\.\d+)?", text):
+        return "number"
+    if re.fullmatch(r"v?\d+(?:\.\d+){1,3}(?:[-+][\w.]+)?", text, re.I):
+        return "version"
+    if re.fullmatch(r"\d{4}(?:[-/.]\d{1,2})?(?:[-/.]\d{1,2})?", text):
+        return "date"
+    return "string"
+
+
+def category_for_key(key: str) -> str:
+    if key in {"project_name", "project_positioning"}:
+        return "project_identity"
+    if key in {"project_date", "experiment_date", "project_version", "model_version"}:
+        return "timeline_version"
+    if key in {"dataset", "dataset_size"}:
+        return "dataset"
+    if key in {"data_split"}:
+        return "split"
+    if key in {"model_name", "module_name", "method_name", "baseline_name"}:
+        return "model_method"
+    if key in {"personal_contribution", "team_contribution"}:
+        return "contribution"
+    if key in {"deployment_status", "deployment_readiness"}:
+        return "deployment"
+    if key in {"open_source_status"}:
+        return "openness"
+    if key in {"real_test_status"}:
+        return "testing"
+    if key in {"limitation"}:
+        return "limitation"
+    if key in {"completion_boundary"}:
+        return "completion_boundary"
+    if key in {"paper_status", "patent_status", "award_status"}:
+        return "outcome_status"
+    if key in {"map_0_5", "map_0_5_0_95", "precision", "recall", "accuracy", "f1_score", "fps", "flops", "parameters", "performance_improvement"}:
+        return "metric"
+    return "other"
+
+
+def evidence_for(source: dict[str, Any], item: dict[str, Any], value: Any, kind: str | None = None) -> dict[str, Any]:
+    evidence_kind = kind or item["evidence_kind"]
+    evidence_id = stable_id(
+        "evidence", source["source_hash"], item["locator"], normalize_space(value), evidence_kind
+    )
+    return {
+        "evidence_id": evidence_id,
+        "source_path": source["source_path"],
+        "source_type": source["source_type"],
+        "source_hash": source["source_hash"],
+        "locator": item["locator"],
+        "excerpt": truncate(item["text"], 500),
+        "extracted_value": value,
+        "modified_at": source["modified_at"],
+        "evidence_kind": evidence_kind,
+    }
+
+
+def make_candidate(
+    source: dict[str, Any],
+    item: dict[str, Any],
+    *,
+    category: str,
+    key: str,
+    value: Any,
+    value_type: str | None = None,
+    unit: str | None = None,
+    scope: dict[str, Any] | None = None,
+    aliases: list[str] | None = None,
+    lifecycle: str = "unspecified",
+    subtype: str | None = None,
+    source_authority: str | None = None,
+    requires_support: bool = False,
+    evidence_kind: str | None = None,
+    ownership_level: str | None = None,
+) -> dict[str, Any]:
+    evidence = evidence_for(source, item, value, evidence_kind)
+    authority = source_authority or {
+        "experiment_result": "raw",
+        "config_value": "primary",
+        "source_code": "primary",
+        "result_table": "formal",
+        "structured_data": "formal",
+        "presentation_claim": "summary",
+        "claim": "claim",
+    }.get(evidence["evidence_kind"], "summary")
+    candidate = {
+        "candidate_id": stable_id(
+            "candidate", category, key, value, scope or {}, source["source_hash"], item["locator"]
+        ),
+        "category": category,
+        "key": key,
+        "value": value,
+        "value_type": value_type or infer_value_type(value, unit),
+        "unit": unit,
+        "scope": scope or {},
+        "aliases": sorted(set(aliases or []), key=str.casefold),
+        "lifecycle": lifecycle,
+        "subtype": subtype,
+        "source_authority": authority,
+        "requires_support": bool(requires_support),
+        "evidence": evidence,
+    }
+    if ownership_level:
+        candidate["ownership_level"] = ownership_level
+    return candidate
+
+
+def explicit_candidates(data: Any, source: dict[str, Any]) -> list[dict[str, Any]]:
+    if not isinstance(data, dict) or not isinstance(data.get("facts"), list):
+        return []
+    candidates = []
+    for index, fact in enumerate(data["facts"]):
+        if not isinstance(fact, dict) or "key" not in fact or ("value" not in fact and "canonical_value" not in fact):
+            continue
+        value = fact.get("value", fact.get("canonical_value"))
+        locator = f"$.facts[{index}]"
+        item = block(locator, json.dumps(fact, ensure_ascii=False, sort_keys=True), fact.get("evidence_kind", "structured_data"))
+        key = normalize_token(fact["key"]).replace("-", "_")
+        candidates.append(
+            make_candidate(
+                source,
+                item,
+                category=fact.get("category") or category_for_key(key),
+                key=key,
+                value=value,
+                value_type=fact.get("value_type"),
+                unit=fact.get("unit"),
+                scope=fact.get("scope") if isinstance(fact.get("scope"), dict) else {},
+                aliases=[str(value) for value in fact.get("aliases", [])],
+                lifecycle=fact.get("lifecycle", "unspecified"),
+                subtype=fact.get("subtype"),
+                source_authority=fact.get("source_authority"),
+                requires_support=bool(fact.get("requires_support", False)),
+                evidence_kind=fact.get("evidence_kind"),
+                ownership_level=fact.get("ownership_level"),
+            )
+        )
+    return candidates
+
+
+def candidates_from_block(source: dict[str, Any], item: dict[str, Any]) -> list[dict[str, Any]]:
+    text = item["text"]
+    candidates: list[dict[str, Any]] = []
+    for match in METRIC_PATTERN.finditer(text):
+        label = match.group("label")
+        key, definition = metric_key(label)
+        raw_value = match.group("value")
+        unit = match.group("unit")
+        value: Any = float(raw_value) if "." in raw_value else int(raw_value)
+        evidence_kind = item["evidence_kind"]
+        requires_support = key == "performance_improvement"
+        if requires_support and evidence_kind not in {"result_table", "experiment_result", "config_value"}:
+            evidence_kind = "claim"
+        candidates.append(
+            make_candidate(
+                source,
+                item,
+                category="metric",
+                key=key,
+                value=value,
+                value_type="percentage" if unit and unit.casefold() in {"%", "percent", "pp"} else "number",
+                unit=unit,
+                scope=infer_scope(text, definition),
+                requires_support=requires_support,
+                evidence_kind=evidence_kind,
+            )
+        )
+
+    for match in NAME_PATTERN.finditer(text):
+        label = normalize_token(match.group("label"))
+        value = match.group("value").strip()
+        qualifier = normalize_token(match.group("qual") or "")
+        if "é¡¹ç›®" in label or label == "project-name":
+            key, category = "project_name", "project_identity"
+        elif "æ¨¡å—" in label or label == "module-name":
+            key, category = "module_name", "model_method"
+        else:
+            key, category = "model_name", "model_method"
+        lifecycle = "unspecified"
+        if any(token in qualifier for token in ("æ—§", "old", "deprecated", "outdated")):
+            lifecycle = "old"
+        elif any(token in qualifier for token in ("æ–°", "å½“å‰", "å·²ç¡®è®¤", "current", "confirmed", "new")):
+            lifecycle = "current"
+        candidates.append(
+            make_candidate(source, item, category=category, key=key, value=value, lifecycle=lifecycle, scope=infer_scope(text))
+        )
+
+    date_match = DATE_PATTERN.search(text)
+    if date_match:
+        candidates.append(
+            make_candidate(
+                source,
+                item,
+                category="timeline_version",
+                key="project_date" if re.search(r"é¡¹ç›®|project", date_match.group(0), re.I) else "experiment_date",
+                value=date_match.group("value"),
+                value_type="date",
+                scope=infer_scope(text),
+            )
+        )
+    version_match = VERSION_PATTERN.search(text)
+    if version_match:
+        candidates.append(
+            make_candidate(
+                source,
+                item,
+                category="timeline_version",
+                key="model_version" if re.search(r"æ¨¡åž‹|model", version_match.group(0), re.I) else "project_version",
+                value=version_match.group("value"),
+                value_type="version",
+                scope=infer_scope(text),
+            )
+        )
+
+    ownership_signal = re.search(r"ç‹¬ç«‹.{0,20}(?:å…¨éƒ¨|æ‰€æœ‰|å…¨æµç¨‹)|single[- ]handed|solely", text, re.I)
+    partial_signal = re.search(r"è´Ÿè´£.{0,80}(?:æ•´ç†|æ ‡æ³¨|éƒ¨åˆ†|å†™ä½œ)|contribut(?:ed|ion).{0,80}(?:partial|annotation|writing)", text, re.I)
+    if ownership_signal or partial_signal:
+        level = "sole" if ownership_signal else "partial"
+        ownership_value = item.get("structured_value")
+        if ownership_value is None:
+            ownership_value = text
+        candidates.append(
+            make_candidate(
+                source,
+                item,
+                category="contribution",
+                key="personal_contribution",
+                value=truncate(ownership_value, 300),
+                subtype="OWNERSHIP",
+                ownership_level=level,
+                evidence_kind="contribution_statement",
+            )
+        )
+
+    status_patterns = [
+        (r"å·²éƒ¨ç½²|éƒ¨ç½²ä¸Šçº¿|\bdeployed\b", "deployment", "deployment_status"),
+        (r"è¾¾åˆ°éƒ¨ç½²è¦æ±‚|æ»¡è¶³éƒ¨ç½²è¦æ±‚|å¯éƒ¨ç½²|deployment[- ]ready|meets?\s+deployment\s+requirements?", "deployment", "deployment_readiness"),
+        (r"å·²å¼€æº|\bopen[- ]source(?:d)?\b", "openness", "open_source_status"),
+        (r"çœŸå®ž(?:åœºæ™¯)?æµ‹è¯•|å®žåœ°æµ‹è¯•|real[- ]world\s+test", "testing", "real_test_status"),
+    ]
+    for expression, category, key in status_patterns:
+        if re.search(expression, text, re.I):
+            kind = item["evidence_kind"]
+            proof = kind in {"experiment_result", "config_value", "source_code", "result_table"}
+            candidates.append(
+                make_candidate(
+                    source,
+                    item,
+                    category=category,
+                    key=key,
+                    value=True,
+                    value_type="boolean",
+                    requires_support=True,
+                    evidence_kind=kind if proof else "claim",
+                )
+            )
+
+    if re.search(r"(?:å±€é™|é™åˆ¶|limitation)", text, re.I):
+        candidates.append(make_candidate(source, item, category="limitation", key="limitation", value=truncate(text, 300)))
+    if re.search(r"(?:ä»…å®Œæˆ|å°šæœª|å½“å‰è¾¹ç•Œ|å®Œæˆè¾¹ç•Œ|prototype\s+only)", text, re.I):
+        candidates.append(
+            make_candidate(source, item, category="completion_boundary", key="completion_boundary", value=truncate(text, 300))
+        )
+    return candidates
+
+
+def deduplicate_candidates(candidates: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
+    result: list[dict[str, Any]] = []
+    seen: set[tuple[Any, ...]] = set()
+    for candidate in candidates:
+        evidence = candidate["evidence"]
+        signature = (
+            candidate["category"],
+            candidate["key"],
+            json.dumps(candidate["value"], ensure_ascii=False, sort_keys=True),
+            json.dumps(candidate["scope"], ensure_ascii=False, sort_keys=True),
+            evidence["source_hash"],
+            evidence["locator"],
+        )
+        if signature in seen:
+            continue
+        seen.add(signature)
+        result.append(candidate)
+    result.sort(
+        key=lambda candidate: (
+            candidate["category"],
+            candidate["key"],
+            candidate["evidence"]["source_path"].casefold(),
+            candidate["evidence"]["locator"],
+            candidate["candidate_id"],
+        )
+    )
+    return result
+
+
+def extract_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
+    documents = []
+    candidates: list[dict[str, Any]] = []
+    for source in manifest.get("sources", []):
+        path = Path(source["absolute_path"])
+        before = sha256_file(path)
+        if before != source["source_hash"]:
+            raise RuntimeError(f"Source changed after scanning: {source['source_path']}")
+        blocks, warnings, structured = extract_document(path, source["source_type"])
+        source_candidates = explicit_candidates(structured, source)
+        has_explicit_fact_list = bool(source_candidates)
+        for item in blocks:
+            if has_explicit_fact_list and str(item.get("locator", "")).startswith("$.facts["):
+                continue
+            source_candidates.extend(candidates_from_block(source, item))
+        after = sha256_file(path)
+        if before != after:
+            raise RuntimeError(f"Read-only integrity failure: {source['source_path']} changed during extraction")
+        candidates.extend(source_candidates)
+        documents.append(
+            {
+                "source_path": source["source_path"],
+                "source_type": source["source_type"],
+                "source_hash": source["source_hash"],
+                "modified_at": source["modified_at"],
+                "size_bytes": source["size_bytes"],
+                "block_count": len(blocks),
+                "candidate_count": len(deduplicate_candidates(source_candidates)),
+                "warnings": warnings,
+                "blocks": blocks,
+            }
+        )
+    final_candidates = deduplicate_candidates(candidates)
+    return {
+        "evidence_version": "1.0",
+        "evidence_id": stable_id("evidence-set", manifest.get("manifest_id"), [c["candidate_id"] for c in final_candidates]),
+        "generated_at": utc_now(),
+        "manifest_id": manifest.get("manifest_id"),
+        "root": manifest.get("root"),
+        "materials": [
+            {
+                key: document[key]
+                for key in ("source_path", "source_type", "source_hash", "modified_at", "size_bytes", "warnings")
+            }
+            for document in documents
+        ],
+        "documents": documents,
+        "candidates": final_candidates,
+        "warnings": [
+            f"{document['source_path']}: {warning}"
+            for document in documents
+            for warning in document.get("warnings", [])
+            if "Decoded as" not in warning
+        ],
+    }
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Extract precise, read-only evidence from a source manifest.")
+    parser.add_argument("--manifest", required=True, help="Path created by scan_sources.py.")
+    parser.add_argument("--output", required=True, help="Output evidence.json path.")
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    manifest = read_json(Path(args.manifest))
+    if len(manifest.get("sources", [])) < 2:
+        print("ERROR: evidence extraction for this Skill requires at least two sources.")
+        return 2
+    try:
+        payload = extract_manifest(manifest)
+    except (OSError, ValueError, RuntimeError) as exc:
+        print(f"ERROR: {exc}")
+        return 1
+    changed, final_payload = write_json_idempotent(Path(args.output), payload)
+    action = "Wrote" if changed else "Unchanged"
+    print(f"{action}: {Path(args.output).resolve()} ({len(final_payload['candidates'])} candidates)")
+    for warning in final_payload.get("warnings", []):
+        print(f"WARNING: {warning}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
