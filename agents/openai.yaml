@@ -1,4 +1,4 @@
 interface:
   display_name: "Project Fact Sync"
-  short_description: "Synchronize factual claims across project materials"
-  default_prompt: "使用 $sync-project-facts 只读对比我提供的同一项目的多份材料，建立或更新带精确来源的事实总账，识别一致、等价、范围差异、过期、冲突、无证据、缺失和未决事实，并给出修复顺序。不要擅自裁决冲突、扩大个人贡献或修改源文件。"
+  short_description: "Synchronize project facts with local preference memory"
+  default_prompt: "使用 $sync-project-facts 只读对比同一项目的多份材料，先加载我已确认的本地偏好和相关历史反馈，再建立带精确来源的事实总账、识别冲突并给出修复顺序；不要擅自裁决、扩大贡献、上传材料或修改源文件。"

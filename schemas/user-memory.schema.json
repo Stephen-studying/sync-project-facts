@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sync-project-facts:schema:user-memory:1.0",
+  "title": "Sync Project Facts Local User Memory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "updated_at",
+    "policy",
+    "preferences",
+    "correction_rules",
+    "pending_inferences"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "local_only",
+        "explicit_feedback_auto_save",
+        "inferred_preferences_require_confirmation",
+        "store_full_conversation",
+        "max_history_entries"
+      ],
+      "properties": {
+        "local_only": {
+          "const": true
+        },
+        "explicit_feedback_auto_save": {
+          "type": "boolean"
+        },
+        "inferred_preferences_require_confirmation": {
+          "const": true
+        },
+        "store_full_conversation": {
+          "const": false
+        },
+        "max_history_entries": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2000
+        }
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/preference"
+      }
+    },
+    "correction_rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/correctionRule"
+      }
+    },
+    "pending_inferences": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/pendingInference"
+      }
+    }
+  },
+  "$defs": {
+    "preference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "value",
+        "source",
+        "confidence",
+        "evidence_summary",
+        "updated_at"
+      ],
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "array"
+          ]
+        },
+        "source": {
+          "enum": [
+            "explicit_feedback",
+            "explicit_setting",
+            "confirmed_inference"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence_summary": {
+          "type": "string"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "correctionRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rule_id",
+        "preference_key",
+        "instruction",
+        "source",
+        "active",
+        "created_at"
+      ],
+      "properties": {
+        "rule_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preference_key": {
+          "type": "string",
+          "minLength": 1
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "enum": [
+            "explicit_feedback",
+            "explicit_setting",
+            "confirmed_inference"
+          ]
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "pendingInference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pending_id",
+        "feedback",
+        "suggested_key",
+        "suggested_value",
+        "created_at"
+      ],
+      "properties": {
+        "pending_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "feedback": {
+          "type": "string",
+          "minLength": 1
+        },
+        "suggested_key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "suggested_value": {},
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}
