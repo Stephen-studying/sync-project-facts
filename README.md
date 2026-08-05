@@ -6,13 +6,15 @@
 
 **把散落在多份材料中的项目说法，整理成可回查、可裁决、可持续更新的事实总账。**
 
-[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-sync--project--facts-4F46E5)](SKILL.md)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](scripts)
-[![Tests](https://img.shields.io/badge/tests-30%20passed-16A34A)](tests)
-[![Local First](https://img.shields.io/badge/core-local--first-0F766E)](#隐私与安全边界)
-[![License](https://img.shields.io/badge/license-MIT-F59E0B)](LICENSE)
+简体中文 · [英文版](README.en.md)
 
-[快速理解](#它解决什么问题) · [核心能力](#核心能力) · [开始使用](#开始使用) · [本地记忆](#可选的本地偏好记忆) · [示例输出](examples/pv-yolo-project/output)
+[![智能体技能](https://img.shields.io/badge/%E7%B1%BB%E5%9E%8B-%E6%99%BA%E8%83%BD%E4%BD%93%E6%8A%80%E8%83%BD-4F46E5)](SKILL.md)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](scripts)
+[![测试](https://img.shields.io/badge/%E6%B5%8B%E8%AF%95-30%20%E9%A1%B9%E9%80%9A%E8%BF%87-16A34A)](tests)
+[![本地优先](https://img.shields.io/badge/%E6%A0%B8%E5%BF%83-%E6%9C%AC%E5%9C%B0%E4%BC%98%E5%85%88-0F766E)](#隐私与安全边界)
+[![许可证](https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF%E8%AF%81-MIT-F59E0B)](LICENSE)
+
+[快速理解](#它解决什么问题) · [核心能力](#核心能力) · [开始使用](#开始使用) · [本地记忆](#可选的本地偏好记忆) · [验证状态](#验证状态)
 
 </div>
 
@@ -81,7 +83,7 @@
 
 ### 审慎裁决
 
-本 Skill 不会因为“多数文件都这样写”、文件更新时间更晚，或某个指标更高，就自动认定其为事实。硬冲突会保留全部候选值及来源，等待用户裁决；已经人工确认的决定在后续运行中不会被静默覆盖。
+本技能 不会因为“多数文件都这样写”、文件更新时间更晚，或某个指标更高，就自动认定其为事实。硬冲突会保留全部候选值及来源，等待用户裁决；已经人工确认的决定在后续运行中不会被静默覆盖。
 
 ## 运行结果
 
@@ -99,14 +101,14 @@ run/
 
 ### 1. 安装
 
-将仓库克隆或下载到 Codex 的 Skills 目录：
+将仓库克隆或下载到 Codex 的技能目录：
 
 ```powershell
 git clone https://github.com/Stephen-studying/sync-project-facts.git `
   "$env:USERPROFILE\.codex\skills\sync-project-facts"
 ```
 
-Skill 的核心流程默认离线运行。Python 3.10+ 即可处理文本、代码、JSON、CSV 及常见 Office Open XML 文件；PDF 或 YAML 的增强抽取可按需安装相应轻量依赖，缺失时会给出清晰警告。
+技能的核心流程默认离线运行。Python 3.10+ 即可处理文本、代码、JSON、CSV 及常见 Office Open XML 文件；PDF 或 YAML 的增强抽取可按需安装相应轻量依赖，缺失时会给出清晰警告。
 
 ### 2. 在 Codex 中调用
 
